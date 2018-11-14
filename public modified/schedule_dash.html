@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Schedule Dashboard</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/schedule_dash_style.css" />
+    <link rel='stylesheet' href='./fullcalendar/fullcalendar.css' />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src='./lib/moment.js'></script>
+    <script src='./fullcalendar/fullcalendar.js'></script>
+    <script>
+      $(function() {
+        $('#calendar').fullCalendar({
+          defaultView: 'agendaWeek',
+          height: 600,
+        })
+
+        $('#topRightCalendar').fullCalendar({
+          height: 300,
+        })
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="topLeft">
+
+      <div class="greeting">
+        <h1>Good Morning,<br/>John Doe</h1>
+      </div>
+
+      <div class="menu">
+        <div class="hamIcon">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+        </div>
+        <div class="signOut">
+          <span class="signOutButton">Sign Out</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="upcomingEvents">
+      <div class="upcoming"></div>
+      <div class="upcoming"></div>
+    </div>
+
+    <div class="rightSide">
+      <div id="topRightCalendar" class="monthlyCalendar"></div>
+        <div class="functionButton" id="addEvent">
+          <a>Add Event</a>
+        </div>
+        <div class="functionButton" id="groupEvent">
+          <a>Group Event</a>
+        </div>
+        <div class="functionButton" id="shareCalendar">
+          <a>Share Calendar</a>
+        </div>
+        <div class="functionButton" id="extensions">
+          <a>Extensions</a>
+        </div>
+    </div>
+
+    <div id='calendar'></div>
+
+      <script>
+        $(document).ready(function(){
+        // hamburger rotation
+          $(".hamIcon").click(function(){
+            $(this).toggleClass("open")
+          })
+        });
+      </script>
+  </body>
+</html>
