@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=1440px, maximum-scale=1.0" name="viewport"/>
+        <link href="./css/logIn.css" rel="stylesheet" type="text/css"/>
+        <meta content="Launchpad by Anima" name="author">
+        </meta>
+    </head>
+    <body style="margin: 0;
+ background: rgba(255, 255, 255, 1.0);">
+        <input id="anPageName" name="page" type="hidden" value="login"/>
+        <form action="none" class="login" method="post" name="none">
+            <a href="signup.html">
+                <div class="rectangle">
+                </div>
+            </a>
+            <img anima-src="./img/log-in-fpro-slide1-compressor2.png" class="fproslide1compressor2" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+            <a href="signup.html">
+                <div anima-show-on-scroll="" class="didyouforgetyour an-animation-enter ">
+                    Did you forget your password? <br />Get help from here.
+                </div>
+            </a>
+            <img anima-src="./img/sign-up-fill-183@2x.png" class="fill183" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+            <img anima-src="./img/log-in-fill-184@2x.png" class="fill184" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+            <img anima-src="./img/log-in-fill-209@2x.png" class="fill209" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+            <div class="schedulingapp">
+                Scheduling App
+            </div>
+            <div anima-show-on-scroll="" class="group an-animation-enter1 ">
+                <div class="rectangle3">
+                </div>
+                <div class="username">
+                    Username
+                </div>
+            </div>
+            <div anima-show-on-scroll="" class="group2 an-animation-enter2 ">
+                <div class="rectangle3">
+                </div>
+                <div class="password">
+                    Password
+                </div>
+            </div>
+            <style>
+                * {
+                    box-sizing          : border-box;
+                }
+                .login .login1-KezK {
+                    pointer-events      : none;
+                    background-color    : rgba(255,255,255,0.0);
+                    bottom              : 40.43%;
+                    height              : 6.15%;
+                    width               : 29.37%;
+                    position            : absolute;
+                    margin              : 0;
+                    left                : 35.31%;
+                    -ms-transform       : rotate(0deg); /* IE 9 */
+                    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+                    transform           : rotate(0deg);
+                }
+                .login .login1-KezK .rectangle7 {
+                    background-color    : rgba(255,255,255,0.0);
+                    top                 : 0%;
+                    height              : calc(100.00% - 2px);
+                    width               : calc(100.00% - 2px);
+                    position            : absolute;
+                    margin              : 0;
+                    left                : 0%;
+                    border-radius       : 2px;
+                    border-style        : solid;
+                    border-width        : 1px;
+                    border-color        : rgba(255, 255, 255, 1.0);
+                    -ms-transform       : rotate(0deg); /* IE 9 */
+                    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+                    transform           : rotate(0deg);
+                }
+                .login .login1-KezK .login2 {
+                    background-color    : rgba(255,255,255,0.0);
+                    top                 : 25.40%;
+                    height              : calc(0.00% + 29px);
+                    width               : 15.13%;
+                    position            : absolute;
+                    margin              : 0;
+                    left                : 42.43%;
+                    -ms-transform       : rotate(0deg); /* IE 9 */
+                    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+                    transform           : rotate(0deg);
+                    font-family         : "AppleSDGothicNeo-SemiBold", Helvetica, Arial, serif;
+                    font-size           : 24.0px;
+                    color               : rgba(255, 255, 255, 1.0);
+                    text-align          : left;
+                    line-height         : 29.0px;
+                }
+            </style>
+            <div id="VCFyExw">
+                <div class="login1-KezK component keyframe1" data-initial-state="keyframe1" data-name="logIn1KezKVCFyExw">
+                    <div class="rectangle7 " data-name="rectangle76T0IVCFyExw">
+                    </div>
+                    <div anima-show-on-scroll="" class="login2 an-animation-enter3 ">
+                        Log In
+                    </div>
+                </div>
+            </div>
+            <script>
+                if (typeof String.prototype.endsWith !== 'function') {
+                    String.prototype.endsWith = function(suffix) {
+                        return this.indexOf(suffix, this.length - suffix.length) !== -1;
+                    };
+                }
+                if (!String.prototype.startsWith) {
+                    String.prototype.startsWith = function(searchString, position) {
+                        position = position || 0;
+                        return this.indexOf(searchString, position) === position;
+                    };
+                }
+                if (!Array.prototype.forEach) {
+                    Array.prototype.forEach = function(callback) {
+                        var T, k;
+                        if (this == null) {
+                            throw new TypeError('this is null or not defined');
+                        }
+                        var O = Object(this);
+                        var len = O.length >>> 0;
+                        if (typeof callback !== 'function') {
+                            throw new TypeError(callback + ' is not a function');
+                        }
+                        if (arguments.length > 1) {
+                            T = arguments[1];
+                        }
+                        k = 0;
+                        while (k < len) {
+                            var kValue;
+                            if (k in O) {
+                                kValue = O[k];
+                                callback.call(T, kValue, k, O);
+                            }
+                            k++;
+                        }
+                    };
+                }
+                function toArray(obj) {
+                    var array = [];
+                    for (var i = obj.length >>> 0; i--; ) {
+                        array[i] = obj[i];
+                    }
+                    return array;
+                }
+                function addClass(object, className) {
+                    object.classList ? object.classList.add(className) : object.className += ' ' + className;
+                }
+                function removeAllClassesButFirst(component, skipClass) {
+                    var classList = component.classList;
+                    var componentClass = classList.item(0);
+                    var toRemove = [];
+                    toArray(classList).forEach(function(className) {
+                        if (className != skipClass && className != componentClass && className != 'component') {
+                            toRemove.push(className);
+                        }
+                    });
+                    toRemove.forEach(function(className) {
+                        classList.remove(className);
+                    });
+                }
+                function applyState(component, stateClass) {
+                    var componentClass = component.classList.item(0);
+                    component.className = componentClass;
+                    component.classList.add(stateClass);
+                }
+                function isCurrentState(component, state) {
+                    var classList = component.classList;
+                    var rv = false;
+                    toArray(classList).forEach(function(className) {
+                        if (className.endsWith(state)) {
+                            rv = true;
+                        }
+                    });
+                    return rv;
+                }
+                function whichTransitionEvent() {
+                    var t, el = document.createElement("fakeelement");
+                    var transitions = {
+                        "transition": "transitionend",
+                        "OTransition": "oTransitionEnd",
+                        "MozTransition": "transitionend",
+                        "WebkitTransition": "webkitTransitionEnd"
+                    };
+                    for (t in transitions) {
+                        if (el.style[t] !== undefined) {
+                            return transitions[t];
+                        }
+                    }
+                }
+                var transitionEvent = whichTransitionEvent();
+                function clicklogIn1KezKVCFyExw1Handler(event) {
+                    var component = document.querySelector('.login .login1-KezK');
+                    if (isCurrentState(component, 'keyframe1')) {
+                        try {
+                            setTimeout(function() {
+                                var component = document.querySelector('.login .login1-KezK');
+                                component.addEventListener(transitionEvent, transitionlogIn1KezKVCFyExwkeyframe1tokeyframe2EndedHandler);
+                                removeAllClassesButFirst(component, 'keyframe1-to-keyframe2');
+                                addClass(component, 'keyframe2');
+                                addClass(component, 'keyframe1-to-keyframe2');
+                            }, 0);
+                        } catch (e) {
+                            console.log(e);
+                        }
+                    }
+                }
+                function transitionlogIn1KezKVCFyExwkeyframe1tokeyframe2EndedHandler(event) {
+                    var component = document.querySelector('.login .login1-KezK');
+                    component.removeEventListener(transitionEvent, transitionlogIn1KezKVCFyExwkeyframe1tokeyframe2EndedHandler);
+                    console.log('transitionlogIn1KezKVCFyExwkeyframe1tokeyframe2EndedHandler()');
+                }
+                child = document.querySelector('.login .login1-KezK');
+                if (child) {
+                    child.style['pointer-events'] = 'auto';
+                    child.addEventListener('click', clicklogIn1KezKVCFyExw1Handler);
+                } else {
+                    console.log('Could not find element at: .login .login1-KezK');
+                }
+                function resetlogIn1KezKVCFyExw() {
+                    console.log('reset');
+                    var component = document.querySelector('.login .login1-KezK');
+                    if (!component) {
+                        return;
+                    }
+                    component.addEventListener(transitionEvent, transitionlogIn1KezKVCFyExwkeyframe1tokeyframe2EndedHandler);
+                    removeAllClassesButFirst(component, 'keyframe1-to-keyframe2');
+                    addClass(component, 'keyframe2');
+                    addClass(component, 'keyframe1-to-keyframe2');
+                }
+                var component = document.querySelector('.component');
+                var event = new Event('click');
+                component.dispatchEvent(event);
+            </script>
+        </form>
+        <!-- Scripts -->
+        <script>
+            anima_isHidden = function(e) {
+                if (!(e instanceof HTMLElement)) return !1;
+                if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
+                return !1;
+            };
+            anima_loadAsyncSrcForTag = function(tag) {
+                var elements = document.getElementsByTagName(tag);
+                var toLoad = [];
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var src = e.getAttribute("src");
+                    var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+                    if (loaded) continue;
+                    var asyncSrc = e.getAttribute("anima-src");
+                    if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+                    if (anima_isHidden(e)) continue;
+                    toLoad.push(e);
+                }
+                toLoad.sort(function(a, b) {
+                    return anima_getTop(a) - anima_getTop(b);
+                });
+                for (var i = 0; i < toLoad.length; i++) {
+                    var e = toLoad[i];
+                    var asyncSrc = e.getAttribute("anima-src");
+                    e.setAttribute("src", asyncSrc);
+                }
+            };
+            anima_pauseHiddenVideos = function(tag) {
+                var elements = document.getElementsByTagName("video");
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
+                    var isHidden = anima_isHidden(e);
+                    if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
+                        e.play();
+                    } else if (isPlaying && isHidden) {
+                        e.pause();
+                    }
+                }
+            };
+            anima_loadAsyncSrc = function(tag) {
+                anima_loadAsyncSrcForTag("img");
+                anima_loadAsyncSrcForTag("iframe");
+                anima_loadAsyncSrcForTag("video");
+                anima_pauseHiddenVideos();
+            };
+            var anima_getTop = function(e) {
+                var top = 0;
+                do {
+                    top += e.offsetTop || 0;
+                    e = e.offsetParent;
+                } while (e);
+                return top;
+            };
+            anima_loadAsyncSrc();
+            anima_old_onResize = window.onresize;
+            anima_new_onResize = undefined;
+            anima_updateOnResize = function() {
+                if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
+                    anima_new_onResize = function(x) {
+                        if (anima_old_onResize != undefined) anima_old_onResize(x);
+                        anima_loadAsyncSrc();
+                    };
+                    window.onresize = anima_new_onResize;
+                    setTimeout(function() {
+                        anima_updateOnResize();
+                    }, 3000);
+                }
+            };
+            anima_updateOnResize();
+            setTimeout(function() {
+                anima_loadAsyncSrc();
+            }, 200);
+        </script>
+        <script>
+            function AnimaShowOnScroll() {
+                this.toShow = [];
+                this.nextEventY = undefined;
+            }
+            AnimaShowOnScroll.prototype.show = function(e) {
+                e.style.display = "";
+            };
+            AnimaShowOnScroll.prototype.hide = function(e) {
+                e.style.display = "none";
+            };
+            AnimaShowOnScroll.prototype.getTop = function(e) {
+                if (e.animaTop != undefined && e.animaTop != 0) {
+                    return e.animaTop;
+                }
+                var top = 0;
+                var iter = e;
+                do {
+                    top += iter.offsetTop || 0;
+                    iter = iter.offsetParent;
+                } while (iter);
+                e.animaTop = top;
+                return top;
+            };
+            AnimaShowOnScroll.prototype.onScroll = function() {
+                var screenBottom = window.pageYOffset + window.innerHeight;
+                if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+                    return;
+                }
+                this.nextEventY = undefined;
+                for (var i = 0; i < this.toShow.length; i++) {
+                    var e = this.toShow[i];
+                    var top = this.getTop(e);
+                    if (top < screenBottom) {
+                        this.show(e);
+                        this.toShow.shift();
+                        i--;
+                    } else {
+                        this.nextEventY = top;
+                        break;
+                    }
+                }
+            };
+            AnimaShowOnScroll.prototype.resetScrolling = function() {
+                var screenBottom = window.pageYOffset + window.innerHeight;
+                for (var i = 0; i < this.toShow.length; i++) {
+                    var e = this.toShow[i];
+                    this.show(e);
+                }
+                this.toShow = [];
+                this.nextEventY == undefined;
+                var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+                itemsToShowOnScroll = itemsToShowOnScroll.filter(function(e) {
+                    return e.getAttribute("anima-show-on-scroll") != undefined;
+                });
+                var getTop = this.getTop;
+                itemsToShowOnScroll.sort(function(a, b) {
+                    return getTop(a) - getTop(b);
+                });
+                for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+                    var e = itemsToShowOnScroll[i];
+                    var top = this.getTop(e);
+                    if (top < screenBottom) {
+                        continue;
+                    }
+                    this.toShow.push(e);
+                    this.hide(e);
+                    this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+                }
+            };
+            AnimaShowOnScroll.prototype.handleEvent = function(e) {
+                switch (e.type) {
+                    case "scroll":
+                        this.onScroll();
+                        break;
+                    case "resize":
+                        this.resetScrolling();
+                        break;
+                }
+            };
+            AnimaShowOnScroll.prototype.init = function() {
+                this.resetScrolling();
+                window.addEventListener("scroll", this);
+                window.addEventListener("resize", this);
+            };
+            setTimeout(function() {
+                var animaShowOnScroll = new AnimaShowOnScroll();
+                animaShowOnScroll.init();
+            }, 250);
+        </script>
+        <!-- End of Scripts -->
+    </body>
+</html>

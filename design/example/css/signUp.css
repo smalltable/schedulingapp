@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css?family=Pattaya:400');
+
+@font-face {
+  font-family: "AirbnbCerealApp-Bold";
+  src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+}
+
+.signup {
+  width               : 100%;
+  min-width           : 1440px;
+  height              : 100vh;
+  min-height          : 1024px;
+  position            : relative;
+  overflow            : hidden;
+  margin              : 0px;
+  background-color    : rgba(255, 255, 255, 1.0);
+}
+a {
+  text-decoration     : none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+div {
+  -webkit-text-size-adjust: none;
+}
+.signup .rectangle3 {
+  background-color    : rgba(255, 255, 255, 0.8);
+  top                 : 305px;
+  height              : 54px;
+  width               : 735px;
+  position            : absolute;
+  margin              : 0;
+  left                : 353px;
+  border-radius       : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .signup3 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 210px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 630px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AirbnbCerealApp-Bold", Helvetica, Arial, serif;
+  font-size           : 50.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 65.0px;
+}
+.signup .rectangle31 {
+  background-color    : rgba(255, 255, 255, 0.8);
+  top                 : 412px;
+  height              : 54px;
+  width               : 735px;
+  position            : absolute;
+  margin              : 0;
+  left                : 353px;
+  border-radius       : 9px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .rectangle2 {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 874px;
+  height              : 65px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 820px;
+  border-radius       : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.55;
+}
+.signup .rectangle21 {
+  background-color    : rgba(255, 255, 255, 1.0);
+  top                 : 874px;
+  height              : 65px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 200px;
+  border-radius       : 10px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.55;
+}
+.signup .oval {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 43px;
+  height              : 694px;
+  width               : 904px;
+  position            : absolute;
+  margin              : 0;
+  left                : 268px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.55;
+}
+.signup .oval2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 57px;
+  height              : 117px;
+  width               : 117px;
+  position            : absolute;
+  margin              : 0;
+  left                : 640px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.8;
+}
+.signup .username {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 319px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 367px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.26;
+  font-family         : "HelveticaNeue-Bold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(116, 115, 115, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+}
+.signup .enterusername {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 269px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 366px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HelveticaNeue-Bold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+}
+.signup .enterpassword {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 375px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 366px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HelveticaNeue-Bold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+}
+.signup .signupwithfaceboo {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 890px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 292px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HelveticaNeue-Bold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+}
+.signup .signupwithlinkedi {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 890px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 907px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "HelveticaNeue-Bold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+}
+.signup .password {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 422px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 367px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.19;
+  font-family         : "HelveticaNeue-Bold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(116, 115, 115, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+}
+.signup .rectangle {
+  background-color    : rgba(0, 0, 0, 1.0);
+  top                 : 0px;
+  height              : 1024px;
+  width               : 1440px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .fproslide1compressor2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 1031px;
+  width               : 1833px;
+  position            : absolute;
+  margin              : 0;
+  left                : -97px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.7;
+}
+.signup .signup1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 174px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 619px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "Pattaya", Helvetica, Arial, serif;
+  font-weight         : 400;
+  font-style          : normal;
+  font-size           : 62.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 87.0px;
+}
+.signup .group {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 347px;
+  height              : 54px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 509px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .group .rectangle32 {
+  background-color    : rgba(155, 153, 153, 1.0);
+  top                 : 0px;
+  height              : 54px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.33;
+}
+.signup .group .username1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 10px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 19px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AppleSDGothicNeo-Medium", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(220, 210, 210, 1.0);
+  text-align          : left;
+  line-height         : 34.0px;
+}
+.signup .group2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 431px;
+  height              : 54px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 509px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .group2 .rectangle32 {
+  background-color    : rgba(155, 153, 153, 1.0);
+  top                 : 0px;
+  height              : 54px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.33;
+}
+.signup .group2 .password1 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 16px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 19px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AppleSDGothicNeo-Medium", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(221, 211, 211, 1.0);
+  text-align          : left;
+  line-height         : 21.0px;
+}
+.signup .group21 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 516px;
+  height              : 54px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 509px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .group21 .rectangle32 {
+  background-color    : rgba(155, 153, 153, 1.0);
+  top                 : 0px;
+  height              : 54px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 1px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  opacity             : 0.33;
+}
+.signup .group21 .confirmpassword {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 16px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 19px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AppleSDGothicNeo-Medium", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(221, 211, 211, 1.0);
+  text-align          : left;
+  line-height         : 21.0px;
+}
+.signup .signup2 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 615px;
+  height              : 63px;
+  width               : 423px;
+  position            : absolute;
+  margin              : 0;
+  left                : 509px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .signup2 .signup4 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 16px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 179px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AppleSDGothicNeo-SemiBold", Helvetica, Arial, serif;
+  font-size           : 24.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  line-height         : 29.0px;
+}
+.signup .signup2 .rectangle7 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 0px;
+  height              : 61px;
+  width               : 421px;
+  position            : absolute;
+  margin              : 0;
+  left                : 0px;
+  border-radius       : 2px;
+  border-style        : solid;
+  border-width        : 1px;
+  border-color        : rgba(255, 255, 255, 1.0);
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .signupwith {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 763px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 685px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AppleSDGothicNeo-ExtraBold", Helvetica, Arial, serif;
+  font-size           : 18.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  letter-spacing      : -0.6px;
+  line-height         : 12.0px;
+}
+.signup .signupwith .span1 {
+  
+}
+.signup .signupwith .span2 {
+  
+}
+.signup .or {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 733px;
+  height              : auto;
+  width               : auto;
+  position            : absolute;
+  margin              : 0;
+  left                : 717px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+  font-family         : "AppleSDGothicNeo-ExtraBold", Helvetica, Arial, serif;
+  font-size           : 22.0px;
+  color               : rgba(255, 255, 255, 1.0);
+  text-align          : left;
+  letter-spacing      : -0.6px;
+  line-height         : 27.0px;
+}
+.signup .fill183 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 844px;
+  height              : 70px;
+  width               : 70px;
+  position            : absolute;
+  margin              : 0;
+  left                : 567px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .fill184 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 844px;
+  height              : 70px;
+  width               : 70px;
+  position            : absolute;
+  margin              : 0;
+  left                : 685px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+.signup .fill209 {
+  background-color    : rgba(255,255,255,0.0);
+  top                 : 844px;
+  height              : 70px;
+  width               : 70px;
+  position            : absolute;
+  margin              : 0;
+  left                : 803px;
+  -ms-transform       : rotate(0deg); /* IE 9 */
+  -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+  transform           : rotate(0deg);
+}
+/* .anima-animate-appear prefix for appear animations */
+.anima-animate-appear {
+  opacity             : 0;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 normal forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 normal forwards;
+}
+.anima-animate-disappear {
+  opacity             : 1;
+  display             : block;
+  -webkit-animation   : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  -moz-animation      : anima-reveal 0.3s ease-in 1 normal forwards;
+  -o-animation        : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+  animation           : anima-reveal 0.3s ease-in-out 1 reverse forwards;
+}
+.anima-animate-nodelay {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay  : 0;
+  animation-delay     : 0;
+}
+@-webkit-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-moz-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@-o-keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
+@keyframes anima-reveal {
+  0%
+   
+  {
+      opacity: 0;
+    }
+  
+    
+  100%
+   
+  {
+      opacity: 1;
+    }
+}
