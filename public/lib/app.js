@@ -41,7 +41,7 @@ var li = ul[0].getElementsByTagName("li");
 for (let i = 0; i < li.length; i++) {
   li[i].addEventListener("click", function() {
     console.log("you clicked region number " + i);
-    $(li[i]).addClass("selected")
+    $(li[i]).toggleClass("selected");
   });
 }
 
