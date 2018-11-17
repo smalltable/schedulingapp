@@ -151,6 +151,25 @@ body {
   list-style-type: none;
   padding: 10px 0px;
 }
+.extContainer{
+  display: none;
+  width: 100%;
+  height: 150px;
+  background-color: gray;
+  position: absolute;
+  z-index: 1;
+}
+.extContainer > label{
+  font-size: 18pt;
+display: block;
+text-align: center;
+
+}
+
+.selected{
+  color: blue;
+}
+
 
 /* Also adding add event inputs  */
 input[type=text], input[type=number] {

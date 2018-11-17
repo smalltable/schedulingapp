@@ -34,7 +34,21 @@ $("#shareCalendar").dblclick(function(){
   $("#addEvent").fadeToggle("slow");
   $("#groupEvent").fadeToggle("slow");
   $(".shareContainer").toggle("fold", 2500);
-})
+});
 
 var ul = document.getElementsByClassName("fList")
-var li = [ul[0].getElementsByTagName("li")];
+var li = ul[0].getElementsByTagName("li");
+for (let i = 0; i < li.length; i++) {
+  li[i].addEventListener("click", function() {
+    console.log("you clicked region number " + i);
+    $(li[i]).addClass("selected")
+  });
+}
+
+
+$("#extensions").dblclick(function(){
+  $("#addEvent").fadeToggle("slow");
+  $("#groupEvent").fadeToggle("slow");
+  $("#shareCalendar").fadeToggle("slow");
+  $(".extContainer").toggle("fold", 2500);
+});
