@@ -117,3 +117,43 @@ body {
     float: right;
 }
 
+/* Hey david, I am adding "add event" button - Pamir */
+
+#addEvent, h2{
+  text-align: center;
+}
+.addContainer{
+  display: none;
+  width: 100%;
+  height: 400px;
+  background-color: gray;
+  position: absolute;
+  z-index: 1;
+}
+.groupContainer{
+  display: none;
+  width: 100%;
+  height: 400px;
+  background-color: gray;
+  position: absolute;
+  z-index: 1;
+}
+/* Also adding add event inputs  */
+input[type=text], input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit]{
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
