@@ -1,43 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 body {
-    background-color: rgb(236, 120, 140);
     font-family: 'Noto Sans', sans-serif;
+    background-color: #BA6363;
+    font-family: "AirbnbCerealApp-Bold";
+    src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
     color: white;
 }
 
 .topLeft {
-    padding-left: 30px;
-    margin: 0 auto;
-    width: 25%;
-    height: 200px;
-    float: left;
+  margin-left: 150px;
+  margin: 0 auto;
+  width: 25%;
+  height: 200px;
+  float: left;
+}
+
+.greeting h1 {
+    font-size: 25pt;
 }
 
 .greeting {
-    font-size: 10pt;
+    margin-left: 40px;
 }
 
 .menu {
-    height: 100px;
-    width: 250px;
-    float: left;
+  height: 100px;
+  width: 170px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 0px;
 }
 
 /* menu button */
 .hamIcon {
-    float: left;
-    position: relative;
-    margin-top: 15px;
-    width: 60px;
-    height: 40px;
+  float: left;
+  position: relative;
+  width: 40px;
+  height: auto;
 }
 
 .hamIcon span {
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    left: 0;
-    background: white;
-    transition: 0.6s;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 0;
+  background: white;
 }
 
 .hamIcon .one {
@@ -64,88 +72,134 @@ body {
     transform: rotate(-45deg);
 }
 
+.signOut {
+  margin-top: 3px;
+}
+
 .signOutButton {
     text-align: center;
-    border: 5px solid white;
-    border-radius: 20px;
-    padding: 0.5em 1.5em 0.5em 1.5em;
+    border: 2.5px solid white;
+    border-radius: 30px;
+    padding: 0.25em 0.75em 0.25em 0.75em;
     float: right;
-    margin-top: 10px;
-    box-shadow: 0 0 5px white;
+    font-size: 12pt;
 }
 
 .signOutButton:hover {
     background-color: white;
-    color: coral;
+    color: #BA6363;
 }
 
 .upcomingEvents {
     width: 30%;
     height: 200px;
     float: left;
-    background-color: red;
     margin-left: 2%;
     margin-right: 2%;
 }
 
 .rightSide {
     float: right;
-    width: 25%
+    width: 30%;
 }
 
 .monthlyCalendar {
     float: right;
-    width: 100%;
+    width: 80%;
     height: 300px;
-    background-color: lightsalmon;
+    background-color: #BA6363;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 10pt;
 }
 
 #calendar {
-    width: 70%;
-    height: 600px;
-    background-color: orange;
-    float: left;
+  width: 60%;
+  height: 500px;
+  background-color: #C16D6D;
+  float: left;
+  margin-top: -10px;
+  margin-left: 40px;
+  padding: 20px 20px;
+  border-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12pt;
+
 }
 
 .functionButton {
     position: relative;
-    margin-top: 30px;
-    width: 100%;
+    margin-top: 20px;
+    margin-right: 50px;
+    width: 80%;
     height: 80px;
-    background-color: orange;
-    border-radius: 20px;
+    background-color: #CD8888;
+    border-radius: 5px;
     float: right;
+}
+
+#lastFunction {
+  margin-bottom: 50px;
 }
 
 /* Hey david, I am adding "add event" button - Pamir */
 
 #addEvent, h2{
-  text-align: center;
+  font-size: 13pt;
+  margin-top: 10px;
+  margin-left: 10px;
 }
+
 .addContainer{
   display: none;
   width: 100%;
-  height: 400px;
-  background-color: gray;
+  height: 500px;
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
+
+.addContainer p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .groupContainer{
   display: none;
   width: 100%;
   height: 400px;
-  background-color: gray;
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
+.groupContainer p {
+  margin-top: 2px;
+  margin-bottom: 2px
+}
+
 .shareContainer{
   display: none;
   width: 100%;
   height: 400px;
-  background-color: gray;
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
+
+.shareContainer li {
+  font-size: 13pt;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  display: block;
+}
+
+.dateRange p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
 .fList{
   font-size: 24pt;
   list-style-type: none;
@@ -155,10 +209,11 @@ body {
   display: none;
   width: 100%;
   height: 150px;
-  background-color: gray;
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
+
 .extContainer > label{
   font-size: 18pt;
 display: block;
@@ -167,26 +222,129 @@ text-align: center;
 }
 
 .selected{
-  color: blue;
+  background-color: #C16D6D;
 }
+
 
 
 /* Also adding add event inputs  */
 input[type=text], input[type=number] {
   width: 100%;
-  padding: 12px 20px;
-  margin: 5px 0px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 6px 10px;
+  margin: 7px 0px;
   box-sizing: border-box;
+  color: white;
+
 }
 input[type=submit]{
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #C16D6D;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 7px 10px;
+  margin: 6px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+input#eName {
+  background-color: #C16D6D;
+  border: none;
+}
+
+::placeholder {
+  color: #CAA4A4;
+}
+
+input#location {
+  background-color: #C16D6D;
+  border: none;
+}
+
+input[type=date] {
+  background-color: #C16D6D;
+  border: none;
+  color: #CAA4A4;
+}
+
+textarea {
+  background-color: #C16D6D;
+  border: none;
+  width: 100%;
+  color: white;
+}
+
+.check {
+  display: block;
+   position: relative;
+   padding-left: 35px;
+   margin-bottom: 12px;
+   cursor: pointer;
+   font-size: 22px;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   margin-top: 12px;
+}
+
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+}
+
+.check:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.check input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.check img {
+  width: 120px;
+  height: auto;
+}
+
+.check p {
+  width: 60%;
+  display: inline-block;
+}
+
+input[type=checkbox]{
+  background-color: #CAA4A4;
 }
