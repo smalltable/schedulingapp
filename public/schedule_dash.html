@@ -1,71 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Schedule Dashboard</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="./css/schedule_dash_style.css" />
-    <link rel='stylesheet' href='./fullcalendar/fullcalendar.css' />
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+<head>
+  <title>Schedule Dashboard</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/schedule_dash_style.css" />
+  <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
     </style>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src='./lib/moment.js'></script>
-    <script src='./fullcalendar/fullcalendar.js'></script>
-    <script>
-      $(function() {
-        $('#calendar').fullCalendar({
-          defaultView: 'agendaWeek',
-          height: 600,
-        })
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src='lib/moment.js'></script>
+  <script src='fullcalendar/fullcalendar.js'></script>
 
-        $('#topRightCalendar').fullCalendar({
-          height: 300,
-        })
-      });
-    </script>
-  </head>
 
-  <body>
-    <div class="topLeft">
-      <div class="greeting">
-        <h1>Good Morning,<br/>John Doe</h1>
+  <script>
+    $(function() {
+      $('#calendar').fullCalendar({
+        defaultView: 'agendaWeek',
+        height: 600,
+      })
+
+      $('#topRightCalendar').fullCalendar({
+        height: 300,
+      })
+    });
+  </script>
+</head>
+
+<body>
+  <div class="topLeft">
+    <div class="greeting">
+      <h1>Good Morning,<br />John Doe</h1>
+    </div>
+
+    <div class="menu">
+      <div class="hamIcon">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
       </div>
-
-      <div class="menu">
-        <div class="hamIcon">
-          <span class="one"></span>
-          <span class="two"></span>
-          <span class="three"></span>
-          <span class="four"></span>
-        </div>
-        <div class="signOut">
-          <span class="signOutButton">Sign Out</span>
-        </div>
+      <div class="signOut">
+        <span class="signOutButton">Sign Out</span>
       </div>
     </div>
+  </div>
 
-    <div class="upcomingEvents">
-      <div class="upcoming"></div>
-      <div class="upcoming"></div>
+  <div class="upcomingEvents">
+    <div class="upcoming"></div>
+    <div class="upcoming"></div>
+  </div>
+
+  <div class="rightSide">
+    <div id="topRightCalendar" class="monthlyCalendar"></div>
+    <div class="functionButton" id="addEvent">
+      <h2>Add Event</h2>
+      <div class="addContainer">
+        <form class="addInput" action="index.html" method="post">
+          <input type="text" id="eName" placeholder="Event Name" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <p><b>Select Date Range</b></p>
+          <div class="dateRange">
+            <input type="date" required="required" />
+            <p>TO</p>
+            <input type="date" required="required" />
+          </div>
+          <p>Add Notes</p>
+          <textarea name="name" rows="5" cols="29" value="">
+          </textarea>
+          <input type="submit" name="submit" value="Submit" id="addEventSubmit">
+        </form>
+      </div>
     </div>
-
-    <div class="rightSide">
-      <div id="topRightCalendar" class="monthlyCalendar"></div>
-      <div class="functionButton" id="addEvent"></div>
-      <div class="functionButton" id="groupEvent"></div>
-      <div class="functionButton" id="shareCalendar"></div>
-      <div class="functionButton" id="extensions"></div>
+    <div class="functionButton" id="groupEvent">
+      <h2>Group Event</h2>
+      <div class="groupContainer">
+        <form class="addInput" action="index.html" method="post">
+          <input type="text" id="eName" placeholder="Event Name" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <p><b>Select Date Range</b></p>
+          <div class="dateRange">
+            <input type="date" required="required" />
+            <p>TO</p>
+            <input type="date" required="required" />
+          </div>
+          <p>Add Notes</p>
+          <textarea name="name" rows="5" cols="29" value="">
+          </textarea>
+          <input type="submit" name="submit" value="Submit" id="addEventSubmit">
+        </form>
+      </div>
     </div>
+    <div class="functionButton" id="shareCalendar">
+      <h2>Share Callender</h2>
+      <div class="shareContainer">
+        <ul class="fList">
+          <li>Eric SteinGraber</li>
+          <li>Nora Ezawa</li>
+          <li>Orlandi Cantussi</li>
+          <li>Lena Arinmis</li>
+        </ul>
+        <input type="submit" name="" value="Share">
+      </div>
+    </div>
+    <div class="functionButton" id="extensions">
+      <h2>Extentions</h2>
+      <div class="extContainer">
+        <label class="check">Google calendar
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="check">Outlook calendar
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="check">Apple calendar
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="check">Cloud Calender
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </div>
+  </div>
 
-    <div id='calendar'></div>
+  <div id='calendar'></div>
+  <!--Hey, I am adding a new script file -Pamir  -->
+  <script type="text/javascript" src="lib/app.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Check app.js inside of lib folder.
 
-      <script>
-        $(document).ready(function(){
-        // hamburger rotation
-          $(".hamIcon").click(function(){
-            $(this).toggleClass("open")
-          })
-        });
-      </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
