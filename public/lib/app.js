@@ -6,7 +6,7 @@
 //             return valid;
 //         }
 //     });
-//     return valid
+//     return valid;
 // }
 
 // hamburger rotation
