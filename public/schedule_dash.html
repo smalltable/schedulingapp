@@ -19,11 +19,11 @@
     $(function() {
       $('#calendar').fullCalendar({
         defaultView: 'agendaWeek',
-        height: 600,
+        height: 500,
       })
 
       $('#topRightCalendar').fullCalendar({
-        height: 300,
+        height: 280,
       })
     });
   </script>
@@ -63,8 +63,9 @@
           <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
           <p><b>Select Date Range</b></p>
           <div class="dateRange">
+            <p>From<p>
             <input type="date" required="required" />
-            <p>TO</p>
+            <p>To</p>
             <input type="date" required="required" />
           </div>
           <p>Add Notes</p>
@@ -105,22 +106,26 @@
         <input type="submit" name="" value="Share">
       </div>
     </div>
-    <div class="functionButton" id="extensions">
+    <div class="functionButton" id="extensions lastFunction">
       <h2>Extentions</h2>
       <div class="extContainer">
-        <label class="check">Google calendar
+        <label class="check" id="google">
+          <img src="./img/google.png" alt="google">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark"></span>
+        </label>
+        <label class="check" id="outlook">
+          <img src="./img/outlook.png" alt="outlook">
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-        <label class="check">Outlook calendar
+        <label class="check" id="apple">
+          <img src="./img/apple.png" alt="apple">
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-        <label class="check">Apple calendar
-          <input type="checkbox">
-          <span class="checkmark"></span>
-        </label>
-        <label class="check">Cloud Calender
+        <label class="check" id="icloud">
+          <img src="./img/icloud.png" alt="icloud">
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
