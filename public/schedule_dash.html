@@ -5,52 +5,58 @@
   <title>Schedule Dashboard</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="css/schedule_dash_style.css" />
-  <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+  <link rel='stylesheet' href='fullcalendar/fullcalendar-custom.css' />
   <style>
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
     </style>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
   <script src='lib/moment.js'></script>
   <script src='fullcalendar/fullcalendar.js'></script>
 
 
   <script>
     $(function() {
-      $('#calendar').fullCalendar({
+      $('#calendarWeek').fullCalendar({
         defaultView: 'agendaWeek',
-        height: 500,
+        height: 'parent',
+        minTime: '06:00:00',
+        maxTime: '23:00:00',
+        nowIndicator: true,
+        allDaySlot: false,
       })
 
       $('#topRightCalendar').fullCalendar({
         height: 280,
       })
     });
+
   </script>
 </head>
 
 <body>
-  <div class="topLeft">
-    <div class="greeting">
-      <h1>Good Morning,<br />John Doe</h1>
-    </div>
-
-    <div class="menu">
-      <div class="hamIcon">
-        <span class="one"></span>
-        <span class="two"></span>
-        <span class="three"></span>
-        <span class="four"></span>
+  <div class="leftSide">
+    <div class="topLeft">
+      <div class="greet">
+        <span class="greeting">Good Morning,<br />John Doe</span>
       </div>
-      <div class="signOut">
-        <span class="signOutButton">Sign Out</span>
+
+      <div class="menu">
+        <div class="hamIcon">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+          <span class="four"></span>
+        </div>
+        <div class="signOut">
+          <span class="signOutButton">Sign Out</span>
+        </div>
       </div>
     </div>
-  </div>
-
-  <div class="upcomingEvents">
-    <div class="upcoming"></div>
-    <div class="upcoming"></div>
+    <div id='calendar'>
+      <div id='calendarWeek'></div>
+    </div>
   </div>
 
   <div class="rightSide">
@@ -64,9 +70,9 @@
           <p><b>Select Date Range</b></p>
           <div class="dateRange">
             <p>From<p>
-            <input type="date" required="required" />
-            <p>To</p>
-            <input type="date" required="required" />
+                <input type="date" required="required" />
+                <p>To</p>
+                <input type="date" required="required" />
           </div>
           <p>Add Notes</p>
           <textarea name="name" rows="5" cols="29" value="">
@@ -95,7 +101,7 @@
       </div>
     </div>
     <div class="functionButton" id="shareCalendar">
-      <h2>Share Callender</h2>
+      <h2>Share Calender</h2>
       <div class="shareContainer">
         <ul class="fList">
           <li>Eric SteinGraber</li>
@@ -106,7 +112,7 @@
         <input type="submit" name="" value="Share">
       </div>
     </div>
-    <div class="functionButton" id="extensions lastFunction">
+    <div class="functionButton" id="extensions">
       <h2>Extentions</h2>
       <div class="extContainer">
         <label class="check" id="google">
@@ -133,11 +139,10 @@
     </div>
   </div>
 
-  <div id='calendar'></div>
   <!--Hey, I am adding a new script file -Pamir  -->
   <script type="text/javascript" src="lib/app.js"></script>
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       // Check app.js inside of lib folder.
 
     });
