@@ -12,7 +12,8 @@
 
 body .fc {
   /* extra precedence to overcome jqui */
-  font-size: 1em; }
+  font-size: 0.4em;
+}
 
 /* Colors
 --------------------------------------------------------------------------------------------------*/
@@ -40,13 +41,22 @@ body .fc {
   box-sizing: border-box;
   /* dimensions */
   margin: 0;
-  height: 2.1em;
+  height: 1.5em;
   padding: 0 .6em;
   /* text & cursor */
   font-size: 1em;
   /* normalize */
   white-space: nowrap;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #BA6363;
+
+}
+
+.fc-today-button {
+  background-color: #BA6363;
+  box-shadow: none;
+  color: white;
+}
 
 /* Firefox has an annoying inner border */
 .fc button::-moz-focus-inner {
