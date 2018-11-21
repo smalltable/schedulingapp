@@ -8,7 +8,10 @@ body {
   color: white;
 }
 
-
+#test-button {
+  background-color: blue;
+  cursor: pointer;
+}
 
 .leftSide {
   width: 70%;
