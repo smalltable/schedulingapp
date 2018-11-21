@@ -15,7 +15,7 @@ $(".hamIcon").click(function() {
 });
 
 
-$("#addEvent").dblclick(function() {
+$("#addEvent").click(function() {
   console.log("hey");
   $(".addContainer").toggle("fold", 2500);
 });
@@ -25,14 +25,14 @@ $("#addEventSubmit").click(function() {
 // Check if all fields are full, if yes then fold it back and send the form field.
 });
 
-$("#groupEvent").dblclick(function(){
-  $("#addEvent").fadeToggle("slow");
+$("#groupEvent").click(function(){
+  $("#addEvent").fadeToggle("fast");
   $(".groupContainer").toggle("fold", 2500);
 })
 
-$("#shareCalendar").dblclick(function(){
-  $("#addEvent").fadeToggle("slow");
-  $("#groupEvent").fadeToggle("slow");
+$("#shareCalendar").click(function(){
+  $("#addEvent").fadeToggle("fast");
+  $("#groupEvent").fadeToggle("fast");
   $(".shareContainer").toggle("fold", 2500);
 });
 
@@ -46,9 +46,35 @@ for (let i = 0; i < li.length; i++) {
 }
 
 
-$("#extensions").dblclick(function(){
+$("#extensions").click(function(){
   $("#addEvent").fadeToggle("slow");
   $("#groupEvent").fadeToggle("slow");
   $("#shareCalendar").fadeToggle("slow");
   $(".extContainer").toggle("fold", 2500);
 });
+
+var database = firebase.database();
+
+$("#")
+
+function writeNewPost(uid, username, picture, title, body) {
+  // A post entry.
+  var postData = {
+    author: username,
+    uid: uid,
+    body: body,
+    title: title,
+    starCount: 0,
+    authorPic: picture
+  };
+$('input[type=submit]')
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('posts').push().key;
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/posts/' + newPostKey] = postData;
+  updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+
+  return firebase.database().ref().update(updates);
+}

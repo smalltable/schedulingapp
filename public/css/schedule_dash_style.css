@@ -4,7 +4,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     background-color: #BA6363;
     font-family: "AirbnbCerealApp-Bold";
-    src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+    src: url('./fonts/AirbnbCereal-Bold.ttf') format("truetype");
     color: white;
 }
 
