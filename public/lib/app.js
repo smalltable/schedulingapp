@@ -15,7 +15,7 @@ $(".hamIcon").click(function() {
 });
 
 
-$("#addEvent").click(function() {
+$("#addEvent").dblclick(function() {
   console.log("hey");
   $(".addContainer").toggle("fold", 2500);
 });
@@ -25,14 +25,14 @@ $("#addEventSubmit").click(function() {
 // Check if all fields are full, if yes then fold it back and send the form field.
 });
 
-$("#groupEvent").click(function(){
-  $("#addEvent").fadeToggle("fast");
+$("#groupEvent").dblclick(function(){
+  $("#addEvent").fadeToggle("slow");
   $(".groupContainer").toggle("fold", 2500);
 })
 
-$("#shareCalendar").click(function(){
-  $("#addEvent").fadeToggle("fast");
-  $("#groupEvent").fadeToggle("fast");
+$("#shareCalendar").dblclick(function(){
+  $("#addEvent").fadeToggle("slow");
+  $("#groupEvent").fadeToggle("slow");
   $(".shareContainer").toggle("fold", 2500);
 });
 
@@ -46,7 +46,7 @@ for (let i = 0; i < li.length; i++) {
 }
 
 
-$("#extensions").click(function(){
+$("#extensions").dblclick(function(){
   $("#addEvent").fadeToggle("slow");
   $("#groupEvent").fadeToggle("slow");
   $("#shareCalendar").fadeToggle("slow");
