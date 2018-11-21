@@ -53,28 +53,35 @@ $("#extensions").click(function(){
   $(".extContainer").toggle("fold", 2500);
 });
 
-var database = firebase.database();
 
-$("#")
+// Firebase database 
 
-function writeNewPost(uid, username, picture, title, body) {
-  // A post entry.
-  var postData = {
-    author: username,
-    uid: uid,
-    body: body,
-    title: title,
-    starCount: 0,
-    authorPic: picture
-  };
-$('input[type=submit]')
-  // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('posts').push().key;
+$("#test-button").click(function() {
+  firebase.database().ref().child("test").set("testestetsetestest");
+});
 
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/posts/' + newPostKey] = postData;
-  updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+// var database = firebase.database();
 
-  return firebase.database().ref().update(updates);
-}
+// $("#")
+
+// function writeNewPost(uid, username, picture, title, body) {
+//   // A post entry.
+//   var postData = {
+//     author: username,
+//     uid: uid,
+//     body: body,
+//     title: title,
+//     starCount: 0,
+//     authorPic: picture
+//   };
+// $('input[type=submit]')
+//   // Get a key for a new Post.
+//   var newPostKey = firebase.database().ref().child('posts').push().key;
+
+//   // Write the new post's data simultaneously in the posts list and the user's post list.
+//   var updates = {};
+//   updates['/posts/' + newPostKey] = postData;
+//   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
+
+//   return firebase.database().ref().update(updates);
+// }
