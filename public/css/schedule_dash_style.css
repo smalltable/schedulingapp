@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body {
+<<<<<<< HEAD
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #BA6363;
+    font-family: "AirbnbCerealApp-Bold";
+    src: url('./fonts/AirbnbCereal-Bold.ttf') format("truetype");
+    color: white;
+=======
   font-family: 'Noto Sans', sans-serif;
   background-color: #BA6363;
   font-family: "AirbnbCerealApp-Bold";
@@ -19,6 +26,7 @@ body {
   margin: 0 auto;
   padding: 0;
   float: left;
+>>>>>>> c03c4aca67e8e1fe9de71c6500303a47a993de05
 }
 
 .topLeft {

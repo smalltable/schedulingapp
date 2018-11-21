@@ -20,6 +20,33 @@
     messagingSenderId: "90892941151"
   };
   firebase.initializeApp(config);
+  //Ken
+  //The code below evaluates whether you are alreay signed in or not.
+  //
+  // firebase.auth().onAuthStateChanged(function(user) {
+  //     if (user) {
+  //         // User is signed in.
+  //         console.log('auth user', user);
+  //     } else {
+  //         // No user is signed in.
+  //     }
+  // });
+
+  //Ken
+  //The code below evaluates whether the email exists or not.(if needed)
+  //(true or false)
+  // var verified = firebase.auth().currentUser.emailVerified;
+  // console.log(verified);
+  //
+  // // If email not confirmed, it sends an email
+  // if (!verified) {
+  //     // sends email
+  //     firebase.auth().currentUser.sendEmailVerification();
+  //
+  //     var email = firebase.auth().currentUser.email;
+  //     console.log('confirmed email', email);
+  // }
+
 </script>
   </head>
   <body>
