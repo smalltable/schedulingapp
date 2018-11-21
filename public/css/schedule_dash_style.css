@@ -1,17 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 body {
-<<<<<<< HEAD
-    font-family: 'Noto Sans', sans-serif;
-    background-color: #BA6363;
-    font-family: "AirbnbCerealApp-Bold";
-    src: url('./fonts/AirbnbCereal-Bold.ttf') format("truetype");
-    color: white;
-=======
+
   font-family: 'Noto Sans', sans-serif;
   background-color: #BA6363;
   font-family: "AirbnbCerealApp-Bold";
   src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+
   color: white;
 }
 
@@ -23,7 +18,6 @@ body {
   margin: 0 auto;
   padding: 0;
   float: left;
->>>>>>> c03c4aca67e8e1fe9de71c6500303a47a993de05
 }
 
 .topLeft {
@@ -33,11 +27,11 @@ body {
 
 .greet {
   font-size: 25pt;
-  width: 300 pt;
+  width: 300px;
   float: left;
-  font-family: "Noto Sans";
+  font-family: "AirbnbCerealApp-Bold";
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 1%;
   margin-bottom: 0;
 }
 
@@ -173,7 +167,7 @@ h2 {
   display: none;
   width: 100%;
   height: 350px;
-  background-color: rgb(117, 61, 61);
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
@@ -187,7 +181,7 @@ h2 {
   display: none;
   width: 100%;
   height: 350px;
-  background-color: rgb(117, 61, 61);
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
@@ -201,14 +195,14 @@ h2 {
   display: none;
   width: 100%;
   height: 350px;
-  background-color: rgb(117, 61, 61);
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
 
 .shareContainer li {
   font-size: 13pt;
-  font-family: 'Nunito', sans-serif;
+
   font-weight: 600;
   display: block;
 }
@@ -229,7 +223,7 @@ h2 {
   display: none;
   width: 100%;
   height: 350px;
-  background-color: rgb(117, 61, 61);
+  background-color: #BA6363;
   position: absolute;
   z-index: 1;
 }
@@ -324,15 +318,11 @@ textarea {
   left: 0;
   height: 15px;
   width: 15px;
-  background-color: #eee;
+  background-color: #B07373;
 }
 
 .check:hover input~.checkmark {
   background-color: #ccc;
-}
-
-.check input:checked~.checkmark {
-  background-color: #2196F3;
 }
 
 .checkmark:after {
@@ -345,17 +335,11 @@ textarea {
   display: block;
 }
 
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.check input:checked ~ .checkmark {
+    background-color: #ccc;
 }
+
+
 
 .check img {
   width: 120px;
