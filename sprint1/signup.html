@@ -9,7 +9,7 @@
 
 
 <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script src="myfbase.js"></script>
+
   </head>
   <body>
     <div id="particles-js"></div>
@@ -72,7 +72,7 @@
             // The widget is rendered.
             // Hide the loader.
             document.getElementById('loader').style.display = 'none';
-          }
+          },
         },
         // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
         signInFlow: 'popup',
@@ -91,5 +91,6 @@
       ui.start('#firebaseui-auth-container', uiConfig);
     </script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="/public/lib/authorization.js"></script>
   </body>
 </html> -->
