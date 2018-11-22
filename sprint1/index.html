@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+    <script src="myfbase.js"></script>
   </head>
   <body>
-    <div id="particles-js"></div>
+  <div id="particles-js"></div>
+    <!-- <div id="particles-js"></div>
     <br>
     <br>
     <br>
@@ -34,7 +39,64 @@
         <a href="signup.html" class="left">Sign up</a>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="main.js"></script> -->
+    <!-- The surrounding HTML is left untouched by FirebaseUI.
+
+     Your app may use that space for branding, controls and other customizations.-->
+     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+      <script type="text/javascript" src="main.js"></script>
+     <script type="text/javascript">
+     var uiConfig = {
+ callbacks: {
+   signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+     // User successfully signed in.
+     // Return type determines whether we continue the redirect automatically
+     // or whether we leave that to developer to handle.
+     return true;
+   },
+   uiShown: function() {
+     // The widget is rendered.
+     // Hide the loader.
+     document.getElementById('loader').style.display = 'none';
+   }
+ },
+ // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+ signInFlow: 'popup',
+ signInSuccessUrl: '<url-to-redirect-to-on-success>',
+ signInOptions: [
+   // Leave the lines as is for the providers you want to offer your users.
+   firebase.auth.EmailAuthProvider.PROVIDER_ID
+ ],
+ // Terms of service url.
+ tosUrl: '<your-tos-url>',
+ // Privacy policy url.
+ privacyPolicyUrl: '<your-privacy-policy-url>'
+};
+// Initialize the FirebaseUI Widget using Firebase.
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
+// The start method will wait until the DOM is loaded.
+ui.start('#firebaseui-auth-container', uiConfig);
+     </script>
+
+<div id="firebaseui-auth-container">
+</div>
+<div id="loader">Loading...</div>
+
+
+
+<script type="text/javascript">
+ var database = firebase.database();
+var headnode = "scheduleapp-a6d3a";
+var leadsRef = database.ref('something');
+leadsRef.on('value', function(snapshot) {
+  console.log( snapshot.val());
+  // console.log(data.name);
+  // snapshot.forEach(function(childSnapshot) {
+  //   var childData = childSnapshot.val();
+  });
+
+</script>
+
   </body>
 </html>

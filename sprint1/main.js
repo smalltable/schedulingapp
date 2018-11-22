@@ -10,7 +10,7 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#ba6363"
       },
       "shape": {
         "type": "circle",
@@ -107,7 +107,7 @@ particlesJS('particles-js',
       }
     },
     "retina_detect": true,
-    
+
   }
 
 );

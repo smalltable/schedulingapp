@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -9,25 +9,16 @@
 
 
 <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCzZGm9E9WKEe5p_9h3rfbnWap4U4cjlgQ",
-    authDomain: "scheduleapp-a6d3a.firebaseapp.com",
-    databaseURL: "https://scheduleapp-a6d3a.firebaseio.com",
-    projectId: "scheduleapp-a6d3a",
-    storageBucket: "scheduleapp-a6d3a.appspot.com",
-    messagingSenderId: "90892941151"
-  };
-  firebase.initializeApp(config);
-</script>
+<script src="myfbase.js"></script>
   </head>
   <body>
     <div id="particles-js"></div>
     <br>
     <br>
     <br>
-    <div class="container">
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+    <!-- <div class="container">
       <div class="top">
         <h1>Sign Up</h1>
       </div>
@@ -61,9 +52,7 @@
     </div>
     <!-- The surrounding HTML is left untouched by FirebaseUI.
      Your app may use that space for branding, controls and other customizations.-->
-<h1>Welcome to My Awesome App</h1>
-<div id="firebaseui-auth-container"></div>
-<div id="loader">Loading...</div>
+
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
       <!-- // Initialize the FirebaseUI Widget using Firebase. -->
@@ -90,12 +79,7 @@
         signInSuccessUrl: 'index.html',
         signInOptions: [
           // Leave the lines as is for the providers you want to offer your users.
-          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-          firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-          firebase.auth.GithubAuthProvider.PROVIDER_ID,
-          firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          firebase.auth.PhoneAuthProvider.PROVIDER_ID
+          firebase.auth.EmailAuthProvider.PROVIDER_ID
         ],
         // Terms of service url.
         tosUrl: 'main.html',
@@ -108,4 +92,4 @@
     </script>
     <script type="text/javascript" src="main.js"></script>
   </body>
-</html>
+</html> -->
