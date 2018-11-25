@@ -25,15 +25,15 @@ $("#addEventSubmit").click(function() {
 // Check if all fields are full, if yes then fold it back and send the form field.
 });
 
-$("#groupEvent").dblclick(function(){
+$(".groupButton").click(function(){
   $("#addEvent").fadeToggle("slow");
-  $(".groupContainer").toggle("fold", 2500);
+  $(".groupContainer").toggle("fold", 2000);
 })
 
-$("#shareCalendar").dblclick(function(){
+$(".shareButton").click(function(){
   $("#addEvent").fadeToggle("slow");
   $("#groupEvent").fadeToggle("slow");
-  $(".shareContainer").toggle("fold", 2500);
+  $(".shareContainer").toggle("fold", 2000);
 });
 
 var ul = document.getElementsByClassName("fList")
@@ -46,11 +46,11 @@ for (let i = 0; i < li.length; i++) {
 }
 
 
-$("#extensions").dblclick(function(){
+$(".extentionButton").click(function(){
   $("#addEvent").fadeToggle("slow");
   $("#groupEvent").fadeToggle("slow");
   $("#shareCalendar").fadeToggle("slow");
-  $(".extContainer").toggle("fold", 2500);
+  $(".extContainer").toggle("fold", 2000);
 });
 
 
