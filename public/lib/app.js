@@ -15,9 +15,9 @@ $(".hamIcon").click(function() {
 });
 
 
-$("#addEvent").dblclick(function() {
+$(".eventButton").click(function() {
   console.log("hey");
-  $(".addContainer").toggle("fold", 2500);
+  $(".addContainer").toggle("fold", 2000);
 });
 
 
@@ -54,7 +54,7 @@ $("#extensions").dblclick(function(){
 });
 
 
-// Firebase database 
+// Firebase database
 
 $("#test-button").click(function() {
   firebase.database().ref().child("test").set("testestetsetestest");
