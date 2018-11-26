@@ -134,6 +134,10 @@ body {
 .monthlyCalendar {
   float: right;
   width: 80%;
+  /* I am not expert with calender but i feel like
+  if we dont specify the height it looks better,
+  but i don't know if it is necessary so I am just gonna
+  leave this comment here - Pamir */
   height: 350px;
   background-color: #BA6363;
   margin-right: 50px;

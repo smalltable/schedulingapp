@@ -1,3 +1,7 @@
+// ===========================================================
+// ==================== Add Event ==========================
+// ===========================================================
+
 var eventName0;
 var eventLocation0;
 var eventFrom0;
@@ -7,10 +11,10 @@ var noon0;
 var morning0;
 var note0;
 $("#addEventSubmit").click(function() {
-    var empty = $(this).parent().find("input").filter(function() {
+    var empty0 = $(this).parent().find("input").filter(function() {
         return this.value === "";
     });
-    if(empty.length) {
+    if(empty0.length) {
         alert("Please fill all inputs");
     } else {
        eventName0 = $('.addInput > #eName').val();
@@ -46,4 +50,80 @@ $("#addEventSubmit").click(function() {
         console.log("Run");
     }
 });
-//Add event input
+
+// ===========================================================
+// ==================== Group Event ==========================
+// ===========================================================
+
+var eventName1;
+var eventLocation1;
+var eventFrom1;
+var eventTo1;
+var evening1;
+var noon1;
+var morning1;
+var note1;
+$("#groupEventSubmit").click(function() {
+    var empty1 = $(this).parent().find("input").filter(function() {
+        return this.value === "";
+    });
+    if(empty1.length) {
+        alert("Please fill all inputs");
+    } else {
+       eventName1 = $('.addInput > #eName').val();
+       eventLocation1 = $('.addInput > #location').val();
+       eventFrom1 = $('#eFrom').val();
+       eventTo1 = $('#eTo').val();
+       note1 = $('#area0').val();
+       evening1 = false;
+       noon1 = false;
+       morning1 = false;
+      if ($('#gMorning').is(":checked"))
+      {
+       console.log("Morning checked");
+        morning0 = true;
+      }
+      if ($('#gNoon').is(":checked"))
+      {
+       console.log("Noon checked");
+        noon0 = true;
+      }
+      if ($('#gEvening').is(":checked"))
+      {
+       console.log("Evening checked");
+        evening = true;
+      }
+      // If none checked then it is considered all they.
+      if(!(evening1 && noon1 && morning1)){
+        morning1 = true;
+        noon1 = true;
+        evening1 = true;
+      }
+        $(".groupContainer").toggle("fold", 2000);
+        console.log("Run");
+    }
+});
+
+// ===========================================================
+// ==================== Extentions ===========================
+// ===========================================================
+
+
+// Do we really need extentions functionality because
+// we are not actually making them connected - Pamir
+
+// ===========================================================
+// ==================== Share Calendar =======================
+// ===========================================================
+  var shareWith = [];
+$("#shareSubmit").click(function(){
+   $(this).parent().find('li').each(function(i){
+    if($(this).hasClass('selected')){
+      if(shareWith.includes($(this).text())){
+        console.log("You can't add same person again");
+      } else{
+      shareWith.push($(this).text());
+      }
+    }
+  });
+});
