@@ -17,28 +17,34 @@ function newUserDatabase() {
             "name": user.displayName,
             "email": user.email,
             "calendar": {
-                "week1": {
+                "week48": {
                     "day0": {
                         "morning": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T06:00:00.000",
+                            "end": "2018-12-02T11:00:00.000"
                         },
                         "afternoon": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T12:00:00.000",
+                            "end": "2018-12-02T17:00:00.000"
                         },
                         "night": {
-                        "event": false,
-                        "eventName": "null",
-                        "eventLocation": "null",
-                        "eventFriends": "null",
-                        "eventNotes": "null"
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null",
+                            "start": "2018-12-02T18:00:00.000",
+                            "end": "2018-12-02T23:00:00.000"
                         }
                     },
                     "day1": {
@@ -47,21 +53,27 @@ function newUserDatabase() {
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T06:00:00.000",
+                            "end": "2018-12-02T11:00:00.000"
                         },
                         "afternoon": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T12:00:00.000",
+                            "end": "2018-12-02T17:00:00.000"
                         },
                         "night": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T18:00:00.000",
+                            "end": "2018-12-02T23:00:00.000"
                         }
                     },
                     "day2": {
@@ -70,21 +82,27 @@ function newUserDatabase() {
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T06:00:00.000",
+                            "end": "2018-12-02T11:00:00.000"
                         },
                         "afternoon": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T12:00:00.000",
+                            "end": "2018-12-02T17:00:00.000"
                         },
                         "night": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T18:00:00.000",
+                            "end": "2018-12-02T23:00:00.000"
                         }
                     },
                     "day3": {
@@ -93,21 +111,27 @@ function newUserDatabase() {
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T06:00:00.000",
+                            "end": "2018-12-02T11:00:00.000"
                         },
                         "afternoon": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T12:00:00.000",
+                            "end": "2018-12-02T17:00:00.000"
                         },
                         "night": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T18:00:00.000",
+                            "end": "2018-12-02T23:00:00.000"
                         }
                     },
                     "day4": {
@@ -116,21 +140,27 @@ function newUserDatabase() {
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T06:00:00.000",
+                            "end": "2018-12-02T11:00:00.000"
                         },
                         "afternoon": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T12:00:00.000",
+                            "end": "2018-12-02T17:00:00.000"
                         },
                         "night": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T18:00:00.000",
+                            "end": "2018-12-02T23:00:00.000"
                         }
                     },
                     "day5": {
@@ -139,21 +169,27 @@ function newUserDatabase() {
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T06:00:00.000",
+                            "end": "2018-12-02T11:00:00.000"
                         },
                         "afternoon": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T12:00:00.000",
+                            "end": "2018-12-02T17:00:00.000"
                         },
                         "night": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T18:00:00.000",
+                            "end": "2018-12-02T23:00:00.000"
                         }
                     },
                     "day6": {
@@ -162,28 +198,35 @@ function newUserDatabase() {
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T06:00:00.000",
+                            "end": "2018-12-02T11:00:00.000"
                         },
                         "afternoon": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T12:00:00.000",
+                            "end": "2018-12-02T17:00:00.000"
                         },
                         "night": {
                             "event": false,
                             "eventName": "null",
                             "eventLocation": "null",
                             "eventFriends": "null",
-                            "eventNotes": "null"
+                            "eventNotes": "null",
+                            "start": "2018-12-02T18:00:00.000",
+                            "end": "2018-12-02T23:00:00.000"
                         }
                     }
                 }
             },
             "friendlist": {
                 "friend0": "test"
-            }
+            },
+            
         });
 
     });

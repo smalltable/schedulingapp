@@ -40,15 +40,54 @@ $("#addEventSubmit").click(function() {
        console.log("Evening checked");
         evening = true;
       }
+
+      // david: don't need this code, it is messing up other code.
       // If none checked then it is considered all they.
-      if(!(evening0 && noon0 && morning0)){
-        morning0 = true;
-        noon0 = true;
-        evening0 = true;
-      }
+      // if(!(evening0 && noon0 && morning0)){
+      //   morning0 = true;
+      //   noon0 = true;
+      //   evening0 = true;
+      // }
+
         $(".addContainer").toggle("fold", 2000);
         console.log("Run");
     }
+
+    // david: writing data to database
+    var d = new Date(eventFrom0);
+    var dayOfWeek = "day" + d.getDay();
+    var userId = firebase.auth().currentUser.uid;
+    if(morning0) {
+      firebase.database().ref("users/" + userId + "/calendar/week48/" + dayOfWeek).update({
+        "morning": {
+          "event": true,
+          "eventName": eventName0,
+          "location": eventLocation0,
+          "notes": note0
+        },
+      });
+    }
+    if(noon0) {
+      firebase.database().ref("users/" + userId + "/calendar/week48/" + dayOfWeek).update({
+        "afternoon": {
+          "event": true,
+          "eventName": eventName0,
+          "location": eventLocation0,
+          "notes": note0
+        },
+      });
+    }
+    if(evening0) {
+      firebase.database().ref("users/" + userId + "/calendar/week48/" + dayOfWeek).update({
+        "night": {
+          "event": true,
+          "eventName": eventName0,
+          "location": eventLocation0,
+          "notes": note0
+        },
+      });
+    }
+
 });
 
 // ===========================================================
