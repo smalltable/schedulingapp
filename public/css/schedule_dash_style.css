@@ -210,6 +210,10 @@ h2 {
   display: block;
 }
 
+.dateRange input{
+  display: inline-block;
+}
+
 .dateRange p {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -242,7 +246,7 @@ h2 {
   background-color: #C16D6D;
 }
 
-.eventButton{
+.eventButton, .groupButton, .shareButton, .extentionButton{
   background-color: #f44336;
    border: none;
    color: white;
