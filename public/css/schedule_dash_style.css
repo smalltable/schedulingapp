@@ -10,10 +10,11 @@ body {
   color: white;
 }
 
-#test-button {
+/* not sure if we needed this anymore so i commented it out -ken */
+/* #test-button {
   background-color: blue;
   cursor: pointer;
-}
+} */
 
 .leftSide {
   width: 70%;
@@ -261,19 +262,24 @@ h2 {
   background-color: #C16D6D;
 }
 
-.eventButton, .groupButton, .shareButton, .extentionButton{
-  background-color: #f44336;
+
+.eventButton, .groupButton, .shareButton, .extentionButton {
+/* modifiying the background color of the buttons -ken */
+  background-color: #C16D6D;
    border: none;
    color: white;
    /* padding: 31px 75px; */
    width: 100%;
    height: 100%;
-   border-radius: 8px;
-   text-align: center;
+   border-radius: 5px;
    text-decoration: none;
    display: inline-block;
    font-size: 16px;
-   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* changing the font of the buttons -ken */
+.eventButton, .groupButton, .shareButton, .extentionButton, a {
+  font-family: "AirbnbCerealApp-Bold";
 }
 
 
