@@ -8,6 +8,7 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
     <script src="lib/myfbase.js"></script>
+    <script src="lib/authorization.js"></script>
   </head>
   <body>
   
@@ -23,6 +24,15 @@
      // User successfully signed in.
      // Return type determines whether we continue the redirect automatically
      // or whether we leave that to developer to handle.
+
+     // david: creates a new database for the user if it is their first time signing in!
+     if(firebase.auth().currentUser.metadata.creationTime == firebase.auth().currentUser.metadata.lastSignInTime) {
+       newUserDatabase();
+       alert('Account and database created!');
+     } else {
+       alert('Welcome back!');
+     }
+
      return true;
    },
    uiShown: function() {
@@ -33,7 +43,8 @@
  },
  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
  signInFlow: 'popup',
- signInSuccessUrl: '<url-to-redirect-to-on-success>',
+ // **** david: redirecting users to schedule page on successful sign-up/login ****
+ signInSuccessUrl: 'schedule_dash.html',
  signInOptions: [
    // Leave the lines as is for the providers you want to offer your users.
    firebase.auth.EmailAuthProvider.PROVIDER_ID

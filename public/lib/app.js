@@ -42,9 +42,10 @@ $(".extentionButton").click(function(){
 
 // Firebase database
 
-$("#test-button").click(function() {
-  firebase.database().ref().child("test").set("testestetsetestest");
-});
+// **** david: removing test button ****
+// $("#test-button").click(function() {
+//   firebase.database().ref().child("test").set("testestetsetestest");
+// });
 
 // var database = firebase.database();
 

@@ -5,7 +5,8 @@
 
 function newUserDatabase() {
 
-    var firebase = app_firebase;
+    // david: commenting out because uneeded.
+    // var firebase = app_firebase;
 
     // for the currently authenticated firebase user
     // create a user in firebase database with user's UID.
@@ -18,39 +19,165 @@ function newUserDatabase() {
             "calendar": {
                 "week1": {
                     "day0": {
-                        "morning": false,
-                        "afternoon": false,
-                        "night": false
+                        "morning": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "afternoon": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "night": {
+                        "event": false,
+                        "eventName": "null",
+                        "eventLocation": "null",
+                        "eventFriends": "null",
+                        "eventNotes": "null"
+                        }
                     },
                     "day1": {
-                        "morning": false,
-                        "afternoon": false,
-                        "night": false
+                        "morning": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "afternoon": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "night": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        }
                     },
                     "day2": {
-                        "morning": false,
-                        "afternoon": false,
-                        "night": false
+                        "morning": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "afternoon": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "night": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        }
                     },
                     "day3": {
-                        "morning": false,
-                        "afternoon": false,
-                        "night": false
+                        "morning": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "afternoon": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "night": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        }
                     },
                     "day4": {
-                        "morning": false,
-                        "afternoon": false,
-                        "night": false
+                        "morning": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "afternoon": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "night": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        }
                     },
                     "day5": {
-                        "morning": false,
-                        "afternoon": false,
-                        "night": false
+                        "morning": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "afternoon": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "night": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        }
                     },
                     "day6": {
-                        "morning": false,
-                        "afternoon": false,
-                        "night": false
+                        "morning": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "afternoon": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        },
+                        "night": {
+                            "event": false,
+                            "eventName": "null",
+                            "eventLocation": "null",
+                            "eventFriends": "null",
+                            "eventNotes": "null"
+                        }
                     }
                 }
             },
