@@ -35,8 +35,9 @@ $("#addEventSubmit").click(function() {
       }
       if ($('#eEvening').is(":checked"))
       {
+        //  david: changed to "evening0", you just had a typo
        console.log("Evening checked");
-        evening = true;
+        evening0 = true;
       }
 
       // david: don't need this code, it is messing up other code.
@@ -148,6 +149,9 @@ $("#groupEventSubmit").click(function() {
 
 // Do we really need extentions functionality because
 // we are not actually making them connected - Pamir
+//
+// David: no I don't think we do. We can just leave this
+// section and come back should we need it.
 
 // ===========================================================
 // ==================== Share Calendar =======================

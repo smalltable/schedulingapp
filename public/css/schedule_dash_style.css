@@ -5,7 +5,7 @@ body {
   font-family: 'Noto Sans', sans-serif;
   background-color: #BA6363;
   font-family: "AirbnbCerealApp-Bold";
-  src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+  src: url('./fonts/AirbnbCereal-Bold.ttf') format("truetype");
 
   color: white;
 }
@@ -295,17 +295,6 @@ input[type=number] {
 
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #C16D6D;
-  color: white;
-  padding: 7px 10px;
-  margin: 6px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 input#eName {
   background-color: #C16D6D;
   border: none;
@@ -324,6 +313,18 @@ input[type=date] {
   background-color: #C16D6D;
   border: none;
   color: #CAA4A4;
+}
+
+/* changing css for the submit buttons -ken */
+#addEventSubmit, #groupEventSubmit, #shareSubmit {
+  width: 100%;
+  background-color: #C16D6D;
+  color: white;
+  padding: 7px 10px;
+  margin: 6px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 textarea {
