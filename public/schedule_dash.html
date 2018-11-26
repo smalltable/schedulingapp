@@ -30,6 +30,15 @@
       $('#topRightCalendar').fullCalendar({
         height: 300,
       })
+
+
+      $('.hamIcon').click(function(){
+        $('.dropdown-content').show();
+        $('.dropdown-content').style.display = "block";
+      })
+
+
+
     });
 
   </script>
@@ -43,14 +52,22 @@
       </div>
 
       <div class="menu">
-        <div class="hamIcon">
-          <span class="one"></span>
-          <span class="two"></span>
-          <span class="three"></span>
-          <span class="four"></span>
+        <div class="dropdown">
+          <div class="hamIcon">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+            <span class="four"></span>
+          </div>
+                  <!-- added dropdown menu - ken -->
+          <div class="dropdown-content">
+              <a href="#">Settings</a>
+              <a href="./help.html">Help</a>
+          </div>
         </div>
         <div class="signOut">
-          <span class="signOutButton">Sign Out</span>
+          <!-- linked signout button to login screen -ken -->
+          <span class="signOutButton"><a href="./index.html">Sign Out</a></span>
         </div>
       </div>
     </div>
