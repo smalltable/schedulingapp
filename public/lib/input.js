@@ -5,7 +5,6 @@
 var eventName0;
 var eventLocation0;
 var eventFrom0;
-var eventTo0;
 var evening0;
 var noon0;
 var morning0;
@@ -20,7 +19,6 @@ $("#addEventSubmit").click(function() {
        eventName0 = $('.addInput > #eName').val();
        eventLocation0 = $('.addInput > #location').val();
        eventFrom0 = $('#eFrom').val();
-       eventTo0 = $('#eTo').val();
        note0 = $('#area0').val();
        evening0 = false;
        noon0 = false;
@@ -97,7 +95,6 @@ $("#addEventSubmit").click(function() {
 var eventName1;
 var eventLocation1;
 var eventFrom1;
-var eventTo1;
 var evening1;
 var noon1;
 var morning1;
@@ -112,7 +109,6 @@ $("#groupEventSubmit").click(function() {
        eventName1 = $('.addInput > #eName').val();
        eventLocation1 = $('.addInput > #location').val();
        eventFrom1 = $('#eFrom').val();
-       eventTo1 = $('#eTo').val();
        note1 = $('#area0').val();
        evening1 = false;
        noon1 = false;
@@ -142,6 +138,8 @@ $("#groupEventSubmit").click(function() {
         console.log("Run");
     }
 });
+// ================= Group Event Dialog ====================
+
 
 // ===========================================================
 // ==================== Extentions ===========================
