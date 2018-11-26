@@ -85,12 +85,9 @@
         <form class="addInput" action="index.html" method="post">
           <input type="text" id="eName" placeholder="Event Name" pattern="[A-Za-z0-9]{2,20}" required="required" />
           <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
-          <p><b>Select Date Range</b></p>
+          <p><b>Select Date</b></p>
           <div class="dateRange">
-            <p>From<p>
                 <input id="eFrom" type="date" required="required" />
-                <p>To</p>
-                <input id="eTo" type="date" required="required" />
                 <br>
                 <br>
                 <!-- modified the checkbox input to add css -ken -->
@@ -109,7 +106,7 @@
           </div>
           <br>
           <p>Add Notes</p>
-          <textarea id='area0' name="name" rows="5" cols="29" value="">
+          <textarea id='area0' name="name" rows="5" cols="29">
           </textarea>
           <input type="button" name="submit" value="Submit" id="addEventSubmit">
         </form>
@@ -122,11 +119,9 @@
         <form class="groupInput" action="index.html" method="post">
           <input type="text" id="eName" placeholder="Event Name" pattern="[A-Za-z0-9]{2,20}" required="required" />
           <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
-          <p><b>Select Date Range</b></p>
+          <p><b>Select Date</b></p>
           <div class="dateRange">
-            <input type="date" required="required" />
-            <p>TO</p>
-            <input type="date" required="required" />
+            <input type="date" required="required"/>
             <br>
             <br>
             <label class="container">
@@ -143,8 +138,9 @@
             </label>
           </div>
           <br>
+          <button class="groupAddFriends" type="button" name="button">Add Friends</button>
           <p>Add Notes</p>
-          <textarea name="name" rows="5" cols="29" value="">
+          <textarea name="name" rows="5" cols="29">
           </textarea>
           <input type="button" name="submit" value="Submit" id="groupEventSubmit">
         </form>
@@ -199,7 +195,6 @@
   <script>
     $(document).ready(function () {
       // Check app.js inside of lib folder.
-
     });
   </script>
   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
