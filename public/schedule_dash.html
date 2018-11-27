@@ -90,9 +90,19 @@
                 <input id="eFrom" type="date" required="required" />
                 <br>
                 <br>
-                <input id="eMorning" type="checkbox" name="morning" value="Morning">Morning
-                <input id="eNoon" type="checkbox" name="midDay" value="Mid Day">Noon
-                <input id="eEvening" type="checkbox" name="evening" value="Evening">Evening
+                <!-- modified the checkbox input to add css -ken -->
+                <label class="container">
+                  <input id="eMorning" type="checkbox" name="morning" value="Morning">Morning
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  <input id="eNoon" type="checkbox" name="midDay" value="Mid Day">Noon
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                  <input id="eEvening" type="checkbox" name="evening" value="Evening">Evening
+                  <span class="checkmark"></span>
+                </label>
           </div>
           <br>
           <p>Add Notes</p>
@@ -114,9 +124,18 @@
             <input type="date" required="required"/>
             <br>
             <br>
-            <input id="gMorning" type="checkbox" name="morning" value="Morning">Morning
-            <input id="gNoon" type="checkbox" name="midDay" value="Mid Day">Noon
-            <input id="gEvening" type="checkbox" name="evening" value="Evening">Evening
+            <label class="container">
+              <input id="gMorning" type="checkbox" name="morning" value="Morning">Morning
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <input id="gNoon" type="checkbox" name="midDay" value="Mid Day">Noon
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <input id="gEvening" type="checkbox" name="evening" value="Evening">Evening
+              <span class="checkmark"></span>
+            </label>
           </div>
           <br>
           <button class="groupAddFriends" type="button" name="button">Add Friends</button>
