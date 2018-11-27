@@ -140,7 +140,15 @@ $("#groupEventSubmit").click(function() {
     }
 });
 // ================= Group Event Dialog ====================
-
+  $('.groupAddFriends').click(function(){
+    $('#dialog').dialog({
+      hide: { effect: "explode", duration: 1000 },
+      height: 400,
+      widht: 400,
+      draggable: false,
+       autoOpen: false,
+    });
+  });
 
 // ===========================================================
 // ==================== Extentions ===========================

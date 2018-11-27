@@ -397,7 +397,9 @@ textarea {
 input[type=checkbox] {
   background-color: #CAA4A4;
 }
-
+#dialog{
+  /* display: none; */
+}
 /*
 Adding dropdown menu - ken
 */
