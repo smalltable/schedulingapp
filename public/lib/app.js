@@ -39,7 +39,17 @@ $(".extentionButton").click(function(){
   $(".extContainer").toggle("fold", 2000);
 });
 
-
+$(".groupAddFriends").click(function(){
+  $(".shareWith").toggle("slide");
+})
+var ul0 = $(".shareList");
+var li0 = ul0[0].getElementsByTagName("li");
+for (let i = 0; i < li0.length; i++) {
+  li0[i].addEventListener("click", function() {
+    console.log("you clicked region number " + i);
+    $(li0[i]).toggleClass("selected");
+  });
+}
 // Firebase database
 
 // **** david: removing test button ****
