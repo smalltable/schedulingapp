@@ -140,16 +140,7 @@ $("#groupEventSubmit").click(function() {
     }
 });
 // ================= Group Event Dialog ====================
-  $('.groupAddFriends').click(function(){
-    $('#dialog').dialog({
-      hide: { effect: "explode", duration: 1000 },
-      height: 400,
-      widht: 400,
-      draggable: false,
-       autoOpen: false,
-    });
-  });
-
+// This jquery method is cursed don't use it EVER!
 // ===========================================================
 // ==================== Extentions ===========================
 // ===========================================================
@@ -175,4 +166,18 @@ $("#shareSubmit").click(function(){
       }
     }
   });
+});
+// ============= Add event == Friend List ======================
+var shareWith0 = [];
+$(".btnShare").click(function(){
+console.log("share button");
+ $(this).parent().find('li').each(function(i){
+  if($(this).hasClass('selected')){
+    if(shareWith0.includes($(this).text())){
+      console.log("You can't add same person again");
+    } else{
+    shareWith0.push($(this).text());
+    }
+  }
+});
 });

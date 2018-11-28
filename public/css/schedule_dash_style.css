@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'AirbnbCerealApp-Bold';
-  src: url('/fonts/AirbnbCereal-Bold.ttf') format("truetype");
+  src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
 }
 
 body {
@@ -277,6 +277,15 @@ h2 {
 .groupContainer p {
   margin-top: 2px;
   margin-bottom: 2px
+}
+
+.shareWith{
+  display: none;
+  width: 100%;
+  height: 200px;
+  background-color:  #BA6363;
+  position: absolute;
+  z-index: 1;
 }
 
 .shareContainer {
