@@ -70,7 +70,7 @@ input[type=submit]{
   position:absolute;
   width: 100%;
   height: 100%;
-  background-color: #ba6363;
+  background-image: linear-gradient(-140deg, #476CBD, #7DCFA2);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
