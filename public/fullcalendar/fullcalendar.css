@@ -41,7 +41,7 @@ body .fc {
   box-sizing: border-box;
   /* dimensions */
   margin: 0;
-  height: 1.5em;
+  height: 1.0em;
   padding: 0 .6em;
   /* text & cursor */
   font-size: 1em;
@@ -1232,7 +1232,7 @@ be a descendant of the grid when it is being dragged.
 
 .fc-list-table td {
   border-width: 1px 0 0;
-  padding: 8px 14px; }
+  padding: 8px 8px; }
 
 .fc-list-table tr:first-child td {
   border-top-width: 0; }
