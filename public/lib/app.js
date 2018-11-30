@@ -6,19 +6,23 @@ $(".hamIcon").click(function() {
 
 
 $(".eventButton").click(function() {
-  console.log("hey");
+  $("#shareCalendar").fadeToggle("slow");
+  // $("#shareCalendar").fadeToggle("slow");
+$("#extensions").fadeToggle("slow");
   $(".addContainer").toggle("fold", 2000);
 });
 
 
-$(".groupButton").click(function(){
-  $("#addEvent").fadeToggle("slow");
-  $(".groupContainer").toggle("fold", 2000);
-})
+// $(".groupButton").click(function(){
+//   $("#addEvent").fadeToggle("slow");
+//   $("#extentions").fadeToggle("slow");
+//   $(".groupContainer").toggle("fold", 2000);
+// })
 
 $(".shareButton").click(function(){
   $("#addEvent").fadeToggle("slow");
-  $("#groupEvent").fadeToggle("slow");
+  // $("#groupEvent").fadeToggle("slow");
+  $("#extensions").fadeToggle("slow");
   $(".shareContainer").toggle("fold", 2000);
 });
 
@@ -26,7 +30,6 @@ var ul = document.getElementsByClassName("fList")
 var li = ul[0].getElementsByTagName("li");
 for (let i = 0; i < li.length; i++) {
   li[i].addEventListener("click", function() {
-    console.log("you clicked region number " + i);
     $(li[i]).toggleClass("selected");
   });
 }
@@ -34,7 +37,7 @@ for (let i = 0; i < li.length; i++) {
 
 $(".extentionButton").click(function(){
   $("#addEvent").fadeToggle("slow");
-  $("#groupEvent").fadeToggle("slow");
+  // $("#groupEvent").fadeToggle("slow");
   $("#shareCalendar").fadeToggle("slow");
   $(".extContainer").toggle("fold", 2000);
 });
@@ -46,10 +49,13 @@ var ul0 = $(".shareList");
 var li0 = ul0[0].getElementsByTagName("li");
 for (let i = 0; i < li0.length; i++) {
   li0[i].addEventListener("click", function() {
-    console.log("you clicked region number " + i);
     $(li0[i]).toggleClass("selected");
   });
 }
+$(".btnShare").click(function(){
+  $(".shareWith").fadeToggle("slide");
+});
+
 // Firebase database
 
 // **** david: removing test button ****
