@@ -49,6 +49,9 @@ $("#addEventSubmit").click(function() {
       // }
 
         $(".addContainer").toggle("fold", 2000);
+        $("#shareCalendar").fadeToggle("slow");
+        // $("#shareCalendar").fadeToggle("slow");
+      $("#extensions").fadeToggle("slow");
         console.log("Run");
     }
 
@@ -166,6 +169,10 @@ $("#shareSubmit").click(function(){
       }
     }
   });
+  $("#addEvent").fadeToggle("slow");
+  // $("#groupEvent").fadeToggle("slow");
+  $("#extensions").fadeToggle("slow");
+  $(".shareContainer").toggle("fold", 2000);
 });
 // ============= Add event == Friend List ======================
 var shareWith0 = [];
