@@ -6,19 +6,23 @@ $(".hamIcon").click(function() {
 
 
 $(".eventButton").click(function() {
-  console.log("hey");
+  $("#shareCalendar").fadeToggle("slow");
+  // $("#shareCalendar").fadeToggle("slow");
+$("#extensions").fadeToggle("slow");
   $(".addContainer").toggle("fold", 2000);
 });
 
 
-$(".groupButton").click(function(){
-  $("#addEvent").fadeToggle("slow");
-  $(".groupContainer").toggle("fold", 2000);
-})
+// $(".groupButton").click(function(){
+//   $("#addEvent").fadeToggle("slow");
+//   $("#extentions").fadeToggle("slow");
+//   $(".groupContainer").toggle("fold", 2000);
+// })
 
 $(".shareButton").click(function(){
   $("#addEvent").fadeToggle("slow");
-  $("#groupEvent").fadeToggle("slow");
+  // $("#groupEvent").fadeToggle("slow");
+  $("#extensions").fadeToggle("slow");
   $(".shareContainer").toggle("fold", 2000);
 });
 
@@ -34,7 +38,7 @@ for (let i = 0; i < li.length; i++) {
 
 $(".extentionButton").click(function(){
   $("#addEvent").fadeToggle("slow");
-  $("#groupEvent").fadeToggle("slow");
+  // $("#groupEvent").fadeToggle("slow");
   $("#shareCalendar").fadeToggle("slow");
   $(".extContainer").toggle("fold", 2000);
 });
