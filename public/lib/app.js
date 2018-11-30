@@ -30,7 +30,6 @@ var ul = document.getElementsByClassName("fList")
 var li = ul[0].getElementsByTagName("li");
 for (let i = 0; i < li.length; i++) {
   li[i].addEventListener("click", function() {
-    console.log("you clicked region number " + i);
     $(li[i]).toggleClass("selected");
   });
 }
@@ -50,10 +49,13 @@ var ul0 = $(".shareList");
 var li0 = ul0[0].getElementsByTagName("li");
 for (let i = 0; i < li0.length; i++) {
   li0[i].addEventListener("click", function() {
-    console.log("you clicked region number " + i);
     $(li0[i]).toggleClass("selected");
   });
 }
+$(".btnShare").click(function(){
+  $(".shareWith").fadeToggle("slide");
+});
+
 // Firebase database
 
 // **** david: removing test button ****

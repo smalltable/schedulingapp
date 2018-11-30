@@ -612,7 +612,7 @@ background-color: #2196F3;
 /*Fade out the particular DIV when user hover on that DIV*/
 .gridContainer div:hover{
   box-shadow: 3px 3px 15px #666;
-  border-color:#C76C0C;
+  border-color: #C76C0C;
   background: #C76C0C;
   color: #fff;
 
