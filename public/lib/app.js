@@ -6,24 +6,24 @@ $(".hamIcon").click(function() {
 
 
 $(".eventButton").click(function() {
-  $("#shareCalendar").fadeToggle("slow");
-  // $("#shareCalendar").fadeToggle("slow");
-$("#extensions").fadeToggle("slow");
-  $(".addContainer").toggle("fold", 2000);
+  $("#shareCalendar").fadeToggle("fast");
+  // $("#shareCalendar").fadeToggle("fast");
+$("#extensions").fadeToggle("fast");
+  $(".addContainer").toggle("fold", 1000);
 });
 
 
 // $(".groupButton").click(function(){
-//   $("#addEvent").fadeToggle("slow");
-//   $("#extentions").fadeToggle("slow");
-//   $(".groupContainer").toggle("fold", 2000);
+//   $("#addEvent").fadeToggle("fast");
+//   $("#extentions").fadeToggle("fast");
+//   $(".groupContainer").toggle("fold", 1000);
 // })
 
 $(".shareButton").click(function(){
-  $("#addEvent").fadeToggle("slow");
-  // $("#groupEvent").fadeToggle("slow");
-  $("#extensions").fadeToggle("slow");
-  $(".shareContainer").toggle("fold", 2000);
+  $("#addEvent").fadeToggle("fast");
+  // $("#groupEvent").fadeToggle("fast");
+  $("#extensions").fadeToggle("fast");
+  $(".shareContainer").toggle("fold", 1000);
 });
 
 var ul = document.getElementsByClassName("fList")
@@ -36,10 +36,10 @@ for (let i = 0; i < li.length; i++) {
 
 
 $(".extentionButton").click(function(){
-  $("#addEvent").fadeToggle("slow");
-  // $("#groupEvent").fadeToggle("slow");
-  $("#shareCalendar").fadeToggle("slow");
-  $(".extContainer").toggle("fold", 2000);
+  $("#addEvent").fadeToggle("fast");
+  // $("#groupEvent").fadeToggle("fast");
+  $("#shareCalendar").fadeToggle("fast");
+  $(".extContainer").toggle("fold", 1000);
 });
 
 $(".groupAddFriends").click(function(){

@@ -48,10 +48,10 @@ $("#addEventSubmit").click(function() {
       //   evening0 = true;
       // }
 
-        $(".addContainer").toggle("fold", 2000);
-        $("#shareCalendar").fadeToggle("slow");
-        // $("#shareCalendar").fadeToggle("slow");
-      $("#extensions").fadeToggle("slow");
+        $(".addContainer").toggle("fold", 1000);
+        $("#shareCalendar").fadeToggle("fast");
+        // $("#shareCalendar").fadeToggle("fast");
+      $("#extensions").fadeToggle("fast");
         console.log("Run");
     }
 
@@ -138,7 +138,7 @@ $("#groupEventSubmit").click(function() {
         noon1 = true;
         evening1 = true;
       }
-        $(".groupContainer").toggle("fold", 2000);
+        $(".groupContainer").toggle("fold", 1000);
         console.log("Run");
     }
 });
@@ -169,10 +169,10 @@ $("#shareSubmit").click(function(){
       }
     }
   });
-  $("#addEvent").fadeToggle("slow");
-  // $("#groupEvent").fadeToggle("slow");
-  $("#extensions").fadeToggle("slow");
-  $(".shareContainer").toggle("fold", 2000);
+  $("#addEvent").fadeToggle("fast");
+  // $("#groupEvent").fadeToggle("fast");
+  $("#extensions").fadeToggle("fast");
+  $(".shareContainer").toggle("fold", 1000);
 });
 // ============= Add event == Friend List ======================
 var shareWith0 = [];
