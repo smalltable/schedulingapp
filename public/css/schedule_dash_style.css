@@ -3,11 +3,15 @@
   src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
 }
 
-body {
+body,html {
   /* changed the background color to gradient -ken */
   background-image: linear-gradient(-140deg, #476CBD, #7DCFA2);
   font-family: "AirbnbCerealApp-Bold";
   color: white;
+  /* added heigh and width 100% so that the page fits the browser -ken */
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* not sure if we needed this anymore so i commented it out -ken */
@@ -121,11 +125,12 @@ body {
 /* making the backgound white -ken */
 .signOutButton:hover {
   background-color: white;
+  color:
 }
 
 /* changing the font color when hovered */
 .signOutButton a:hover {
-  color: transparent;
+  color: #437A95;
 }
 
 .rightSide {
@@ -154,17 +159,19 @@ body {
 #calendarWeek {
   border-color: transparent;
 }
+/* changed calendar to class because we are not using
+ID anymore -ken */
+/* the calendar is overflowing but sure why, i tried deleting the height
+but no changes see -ken */
 
-#calendar {
-  height: 76vh;
-  background-blend-mode: lighten;
+.calendar {
   float: left;
   margin: 0 auto;
-  padding: 20px 20px;
   border-radius: 5px;
   font-family: 'Nunito', sans-serif;
   font-size: 12pt;
 }
+
 /* changed the design for the buttons -ken */
 .functionButton {
   position: relative;
@@ -178,6 +185,15 @@ body {
   border-width: 1px;
   border-radius: 30px;
   float: right;
+}
+/* made the background color white when the function buttons are hovered -ken */
+
+button[type=button]:hover {
+  background-color: white;
+  opacity: 0.5;
+  color: #437A95;
+  border-radius: 30px;
+  border: none;
 }
 
 /* Hey david, I am adding "add event" button - Pamir */
@@ -196,11 +212,40 @@ h2 {
   background-color: transparent;
   position: absolute;
   z-index: 1;
+  /* made event, location and selectdate aligned center -ken */
+  text-align: center;
 }
 
 .addContainer p {
   margin-top: 2px;
   margin-bottom: 2px;
+}
+
+.groupAddFriends{
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+/* changed the css for addFriends button in addEvent -ken */
+button[name=addFriend]{
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border:none;
+  font-family: "AirbnbCerealApp-Bold";
+  font-size: 15pt;
+}
+
+button[name=addFriend]:hover {
+  background-color: white;
+  border:none;
+  opacity: 0.8;
+  display: block;
+  width: 100%;
+  color: #437A95;
+  border-radius: 5px;
+
 }
 
 
@@ -309,7 +354,7 @@ h2 {
 
 .shareContainer li {
   font-size: 13pt;
-  font-family: 
+  font-family:
   font-weight: 600;
   display: block;
 }
@@ -376,7 +421,7 @@ h2 {
 
 input[type=text],
 input[type=number] {
-  width: 100%;
+  width: 80%;
   padding: 6px 10px;
   margin: 7px 0px;
   box-sizing: border-box;
