@@ -1,0 +1,77 @@
+/* made css -ken */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(-140deg, #476CBD, #7DCFA2);
+}
+
+.top-wrapper {
+  height: 20%;
+  text-align: center;
+}
+
+.topbar {
+  height: 50px;
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+
+}
+
+.topbar a {
+  display: block;
+  float: left;
+  color: white;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.top-wrapper h1 {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.middle-wrapper {
+  height:70%;
+  background-color: transparent;
+  text-align: center;
+}
+
+.container {
+  display: block;
+  width: 800px;
+  height: 150px;
+  background-color: white;
+  border-radius: 4px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.foot-wrapper {
+  height: 8%;
+  background-color: #234667;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  clear: both;
+}
+
+.foot-wrapper h2 {
+  font-size: 16pt;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
