@@ -88,3 +88,23 @@ $(".btnShare").click(function(){
 
 //   return firebase.database().ref().update(updates);
 // }
+
+
+// david: creating a popup notification notifying a new user and database has been created.
+// function newUserPopup() {
+//   var newPopup = document.getElementById('new-user-popup');
+//   var newClose = document.getElementById('new-close');
+
+//   newPopup.style.display = "block";
+
+//   newClose.onclick = function() {
+//       newPopup.style.display = "none";
+//   }
+
+//   window.onclick = function(event) {
+//       if (event.target == newPopup) {
+//           newPopup.style.display = "none";
+//       }
+//   }
+
+// }
