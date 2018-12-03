@@ -220,6 +220,7 @@ h2 {
 /* changed width of submit button -ken */
 input#addEventSubmit {
   width: 80%;
+  
 }
 
 .addContainer {
