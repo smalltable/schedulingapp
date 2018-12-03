@@ -3,6 +3,10 @@
   src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
 }
 
+* {
+  margin: 0;
+}
+
 body,html {
   /* changed the background color to gradient -ken */
   background-image: linear-gradient(-140deg, #476CBD, #7DCFA2);
@@ -53,8 +57,8 @@ body,html {
 }
 
 .menu {
-  height: 50px;
-  width: 170px;
+  height: 100px;
+  width: 220px;
   float: right;
   margin-top: 4%;
   margin-right: 2%;
@@ -104,7 +108,9 @@ body,html {
 }
 
 .signOut {
-  margin-top: 3px;
+  display: inline-block;
+  height: 40px;
+  padding: 15px 20px;
 }
 
 .signOutButton {
@@ -136,6 +142,7 @@ body,html {
 .rightSide {
   float: right;
   width: 30%;
+  height: 750px;
 }
 
 .monthlyCalendar {
@@ -159,17 +166,24 @@ body,html {
 #calendarWeek {
   border-color: transparent;
 }
+
+.fc
 /* changed calendar to class because we are not using
 ID anymore -ken */
 /* the calendar is overflowing but sure why, i tried deleting the height
 but no changes see -ken */
-
+/* changed height to max height -ken */
 .calendar {
   float: left;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 0px;
   border-radius: 5px;
+  padding-left: 15px;
   font-family: 'Nunito', sans-serif;
   font-size: 12pt;
+  max-height: 550px;
 }
 
 /* changed the design for the buttons -ken */
@@ -190,7 +204,7 @@ but no changes see -ken */
 
 button[type=button]:hover {
   background-color: white;
-  opacity: 0.5;
+  opacity: 0.9;
   color: #437A95;
   border-radius: 30px;
   border: none;
@@ -204,8 +218,13 @@ h2 {
   margin-top: 0px;
   margin-left: 10px;
 }
+/* changed width of submit button -ken */
+input#addEventSubmit {
+  width: 80%;
+}
 
 .addContainer {
+  margin-top: 20px;
   display: none;
   width: 100%;
   height: 350px;
@@ -215,38 +234,53 @@ h2 {
   /* made event, location and selectdate aligned center -ken */
   text-align: center;
 }
-
+/* changed css -ken */
 .addContainer p {
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 15px;
+  margin-bottom:20px;
+  float: left;
+  display: inline-block;
+  margin-left: 40px;
+  font-size: 13pt;
+}
+/* added css -ken */
+input#eFrom {
+  display: inline-block;
+  margin-top: 13px;
+  margin-bottom: 20px;
 }
 
 .groupAddFriends{
   float: left;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-/* changed the css for addFriends button in addEvent -ken */
+/* changed position of addFriends button, changed size of font -ken */
 button[name=addFriend]{
   width: 100%;
   background-color: transparent;
   color: white;
   border:none;
   font-family: "AirbnbCerealApp-Bold";
-  font-size: 15pt;
+  font-size: 13pt;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 23px;
 }
-
+/* changed css -ken */
 button[name=addFriend]:hover {
   background-color: white;
-  border:none;
-  opacity: 0.8;
-  display: block;
-  width: 100%;
+  opacity: 0.7;
   color: #437A95;
-  border-radius: 5px;
-
+  border-radius: 2px;
 }
+
+label.container {
+  margin-right: 8px;
+}
+
 
 
 /* changing css for the checkbox in the add event and group event -ken */
@@ -283,18 +317,19 @@ button[name=addFriend]:hover {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  border: 1px solid white;
   border-radius: 50%;
 }
-
+/* changed color to white -ken */
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: white;
+  opacity: 0.45;
 }
-
+/* changed color to white when checked -ken */
 /* When the radio button is checked, add a background color */
 .container input:checked ~ .checkmark {
-  background-color: transparent;
+  background-color: white;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -354,13 +389,20 @@ button[name=addFriend]:hover {
 
 .shareContainer li {
   font-size: 13pt;
-  font-family:
   font-weight: 600;
   display: block;
 }
 
 .dateRange input{
   display: inline-block;
+}
+/* added css -ken */
+label.container {
+  padding-left: 20px;
+}
+
+span.checkmark {
+  margin: 5px 0;
 }
 
 .dateRange p {
@@ -507,11 +549,11 @@ textarea {
   height: 12px;
   width: 12px;
   /* changed color -ken */
-  background-color: #ccc;
 }
 
 .check:hover input~.checkmark {
-  background-color: #ccc;
+  background-color: white;
+  opacity: 0.4;
 }
 
 .checkmark:after {
@@ -525,7 +567,7 @@ textarea {
 }
 
 .check input:checked ~ .checkmark {
-    background-color: #ccc;
+    background-color: white;
 }
 
 /* Dialog div styling */
@@ -539,9 +581,9 @@ textarea {
   display: inline-block;
 }
 
-input[type=checkbox] {
+/* input[type=checkbox] {
   background-color: #CAA4A4;
-}
+} */
 #dialog{
   /* display: none; */
 }
@@ -568,6 +610,8 @@ Adding dropdown menu - ken
 .dropdown {
     position: relative;
     display: inline-block;
+    height: 40px;
+    padding: 20px 20px;;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -605,12 +649,20 @@ Adding dropdown menu - ken
 
 .gridContainer{
   display: grid;
-  grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
-  grid-template-rows: 500px;
+  grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
+  grid-template-rows: 550px;
   /* background-color: #2196F3; */
   width: 100%;
   height: 85%;
 }
+
+/* changed font style for the detail -ken */
+.gridContainer p {
+  font-weight: lighter;
+  font-family: sans-serif;
+  font-size: 10pt;
+}
+
 .h3{
   display: inline;
 }
@@ -655,13 +707,14 @@ Adding dropdown menu - ken
 }
 
 /*Fade out the particular DIV when user hover on that DIV*/
+/* changed color for backgound and font -ken */
 .gridContainer div:hover{
-  box-shadow: 3px 3px 15px #666;
-  border-color: #C76C0C;
-  background: #C76C0C;
-  color: grey;
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
 
-  /*Opacity*/
+#today {
   zoom: 1;
   filter: alpha(opacity=100);
   opacity: 1;

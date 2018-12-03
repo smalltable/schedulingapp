@@ -889,7 +889,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 .fc-basic-view .fc-week-number,
 .fc-basic-view .fc-day-number {
-  padding: 2px; }
+  padding: 1px; }
 
 .fc-basic-view th.fc-week-number,
 .fc-basic-view th.fc-day-number {
@@ -1291,3 +1291,7 @@ be a descendant of the grid when it is being dragged.
 .fc-unthemed .fc-list-empty {
   /* theme will provide own background */
   background-color: #eee; }
+
+  td.fc-day-top {
+    padding: 1px 0;
+  }
