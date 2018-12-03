@@ -26,13 +26,13 @@ $(".shareButton").click(function(){
   $(".shareContainer").toggle("fold", 1000);
 });
 
-var ul = document.getElementsByClassName("fList")
-var li = ul[0].getElementsByTagName("li");
-for (let i = 0; i < li.length; i++) {
-  li[i].addEventListener("click", function() {
-    $(li[i]).toggleClass("selected");
-  });
-}
+// var ul = document.getElementsByClassName("fList")
+// var li = ul[0].getElementsByTagName("li");
+// for (let i = 0; i < li.length; i++) {
+//   li[i].addEventListener("click", function() {
+//     $(li[i]).toggleClass("selected");
+//   });
+// }
 
 
 $(".extentionButton").click(function(){
