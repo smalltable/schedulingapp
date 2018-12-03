@@ -335,10 +335,7 @@
             <button class="btnShare" type="button" name="button">Share</button>
           </div>
           <br>
-          <!-- i took this out for now -ken
-          <p>Add Notes</p>
-          <textarea id='area0' name="name" rows="5" cols="29">
-          </textarea> -->
+
           <input type="button" name="submit" value="Submit" id="addEventSubmit">
         </form>
       </div>
@@ -346,15 +343,34 @@
 
     <div class="functionButton" id="shareCalendar">
       <!-- <h2>Share Calender</h2> -->
-      <button type="button" class="shareButton">Share Calendar</button>
+      <button type="button" class="shareButton">Group event</button>
       <div class="shareContainer">
-        <ul class="fList">
-          <li>Eric SteinGraber</li>
-          <li>Nora Ezawa</li>
-          <li>Ginevra Orlandi Contucci</li>
-          <li>Lena Arinmis</li>
-        </ul>
-        <input type="button" name="" value="Share" id="shareSubmit">
+        <form class="addInput" action="index.html" method="post">
+          <input type="text" id="eName" placeholder="Event Name" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <p><b>Select Date</b></p>
+          <div class="dateRange">
+                <input id="eFrom" type="date" required="required" />
+
+
+          </div>
+          <div class="groupAddFriends">
+            <button type="button" name="addFriend">Add Friends</button>
+          </div>
+
+          <div class="shareWith">
+            <ul class="shareList">
+              <li>Eric SteinGraber</li>
+              <li>Nora Ezawa</li>
+              <li>Ginevra Orlandi Contucci</li>
+              <li>Lena Arinmis</li>
+            </ul>
+            <button class="btnShare" type="button" name="button">Share</button>
+          </div>
+          <br>
+
+          <input type="button" name="submit" value="Submit" id="addEventSubmit">
+        </form>
       </div>
     </div>
     <div class="functionButton" id="extensions">
