@@ -191,7 +191,9 @@ console.log("share button");
 });
 });
 
+// doesn't work for some reason... won't run on document ready. created a "update" button instead.
 // $(document).ready(function() {
+//   alert('success');
 //   var userId = firebase.auth().currentUser.uid;
 //   firebase.database().ref("users/" + userId).update({
 //     "update": true
@@ -643,3 +645,225 @@ function updateCalendar() {
 
     });
 }
+
+
+// clears the user's database for new weeks.
+function newDatabase() {
+  var userId = firebase.auth().currentUser.uid;
+  firebase.database().ref("users/" + userId).update({
+      "calendar": {
+          "week48": {
+              "day0": {
+                  "morning": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T06:00:00.000",
+                      "end": "2018-12-02T11:00:00.000"
+                  },
+                  "afternoon": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T12:00:00.000",
+                      "end": "2018-12-02T17:00:00.000"
+                  },
+                  "night": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T18:00:00.000",
+                      "end": "2018-12-02T23:00:00.000"
+                  }
+              },
+              "day1": {
+                  "morning": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T06:00:00.000",
+                      "end": "2018-12-02T11:00:00.000"
+                  },
+                  "afternoon": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T12:00:00.000",
+                      "end": "2018-12-02T17:00:00.000"
+                  },
+                  "night": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T18:00:00.000",
+                      "end": "2018-12-02T23:00:00.000"
+                  }
+              },
+              "day2": {
+                  "morning": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T06:00:00.000",
+                      "end": "2018-12-02T11:00:00.000"
+                  },
+                  "afternoon": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T12:00:00.000",
+                      "end": "2018-12-02T17:00:00.000"
+                  },
+                  "night": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T18:00:00.000",
+                      "end": "2018-12-02T23:00:00.000"
+                  }
+              },
+              "day3": {
+                  "morning": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T06:00:00.000",
+                      "end": "2018-12-02T11:00:00.000"
+                  },
+                  "afternoon": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T12:00:00.000",
+                      "end": "2018-12-02T17:00:00.000"
+                  },
+                  "night": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T18:00:00.000",
+                      "end": "2018-12-02T23:00:00.000"
+                  }
+              },
+              "day4": {
+                  "morning": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T06:00:00.000",
+                      "end": "2018-12-02T11:00:00.000"
+                  },
+                  "afternoon": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T12:00:00.000",
+                      "end": "2018-12-02T17:00:00.000"
+                  },
+                  "night": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T18:00:00.000",
+                      "end": "2018-12-02T23:00:00.000"
+                  }
+              },
+              "day5": {
+                  "morning": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T06:00:00.000",
+                      "end": "2018-12-02T11:00:00.000"
+                  },
+                  "afternoon": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T12:00:00.000",
+                      "end": "2018-12-02T17:00:00.000"
+                  },
+                  "night": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T18:00:00.000",
+                      "end": "2018-12-02T23:00:00.000"
+                  }
+              },
+              "day6": {
+                  "morning": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T06:00:00.000",
+                      "end": "2018-12-02T11:00:00.000"
+                  },
+                  "afternoon": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T12:00:00.000",
+                      "end": "2018-12-02T17:00:00.000"
+                  },
+                  "night": {
+                      "event": false,
+                      "eventName": "null",
+                      "eventLocation": "null",
+                      "eventFriends": "null",
+                      "eventNotes": "null",
+                      "start": "2018-12-02T18:00:00.000",
+                      "end": "2018-12-02T23:00:00.000"
+                  }
+              }
+          }
+      },
+      
+  });
+} 
+
+
+$('#reset-button').click(function(){
+  newDatabase();
+  updateCalendar();
+})
