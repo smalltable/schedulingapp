@@ -8,7 +8,8 @@
   padding: 0;
 }
 
-body,html {
+body,
+html {
   /* changed the background color to gradient -ken */
   background-image: linear-gradient(-140deg, #476CBD, #7DCFA2);
   font-family: "AirbnbCerealApp-Bold";
@@ -75,21 +76,25 @@ body,html {
   right: 0;
   z-index: 1;
 }
+
 #rightSideNav a {
   padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-    margin: 0 auto;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  margin: 0 auto;
 }
+
 #rightSideNav a:hover {
   color: rgb(27, 27, 27);
 }
+
 #rightSideNav a:second-child {
   margin-top: 60px;
 }
+
 #rightSideNav .closebtn {
   position: relative;
   top: 0;
@@ -98,16 +103,28 @@ body,html {
   margin-left: 25px;
   margin-top: 0px;
 }
+
 /* used in app.js */
 @-webkit-keyframes image_blur {
-  0% { -webkit-filter: blur(0px);}
+  0% {
+    -webkit-filter: blur(0px);
+  }
+
   /* 50% { -webkit-filter: blur(5px);} */
-  100% { -webkit-filter: blur(15px);}
+  100% {
+    -webkit-filter: blur(15px);
+  }
 }
+
 @-webkit-keyframes image_blur_reverse {
-  0% { -webkit-filter: blur(15px);}
+  0% {
+    -webkit-filter: blur(15px);
+  }
+
   /* 50% { -webkit-filter: blur(5px);} */
-  100% { -webkit-filter: blur(0px);}
+  100% {
+    -webkit-filter: blur(0px);
+  }
 }
 
 /* menu button */
@@ -191,10 +208,12 @@ body,html {
   float: left;
   margin: 10px;
 }
+
 #reset {
   float: left;
   margin: 10px;
 }
+
 #test-button {
   text-decoration: none;
   color: white;
@@ -204,11 +223,13 @@ body,html {
   padding: 0.25em 0.75em 0.25em 0.75em;
   font-size: 12pt;
 }
+
 #test-button:hover {
   color: #437A95;
   background-color: white;
   cursor: pointer;
 }
+
 #reset-button {
   text-decoration: none;
   color: white;
@@ -218,6 +239,7 @@ body,html {
   padding: 0.25em 0.75em 0.25em 0.75em;
   font-size: 12pt;
 }
+
 #reset-button:hover {
   color: #437A95;
   background-color: white;
@@ -256,6 +278,7 @@ body,html {
 }
 
 .fc
+
 /* changed calendar to class because we are not using
 ID anymore -ken */
 /* the calendar is overflowing but sure why, i tried deleting the height
@@ -288,6 +311,7 @@ but no changes see -ken */
   border-radius: 30px;
   float: right;
 }
+
 /* made the background color white when the function buttons are hovered -ken */
 
 button[type=button]:hover {
@@ -306,6 +330,7 @@ h2 {
   margin-top: 0px;
   margin-left: 10px;
 }
+
 /* changed width of submit button -ken */
 input#addEventSubmit {
   width: 80%;
@@ -323,34 +348,37 @@ input#addEventSubmit {
   /* made event, location and selectdate aligned center -ken */
   text-align: center;
 }
+
 /* changed css -ken */
 .addContainer p {
   margin-top: 15px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   float: left;
   display: inline-block;
   margin-left: 40px;
   font-size: 13pt;
 }
+
 /* added css -ken */
-input#eFrom, input#eFrom1 {
+input#eFrom,
+input#eFrom1 {
   display: inline-block;
   margin-top: 13px;
   margin-bottom: 20px;
 }
 
-.groupAddFriends{
+.groupAddFriends {
   float: left;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 /* changed position of addFriends button, changed size of font -ken */
-button[name=addFriend]{
+button[name=addFriend] {
   width: 100%;
   background-color: transparent;
   color: white;
-  border:none;
+  border: none;
   font-family: "AirbnbCerealApp-Bold";
   font-size: 13pt;
   display: block;
@@ -358,6 +386,7 @@ button[name=addFriend]{
   margin-bottom: 15px;
   margin-left: 23px;
 }
+
 /* changed css -ken */
 button[name=addFriend]:hover {
   background-color: white;
@@ -409,15 +438,17 @@ label.container {
   border: 1px solid white;
   border-radius: 50%;
 }
+
 /* changed color to white -ken */
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
   background-color: white;
   opacity: 0.45;
 }
+
 /* changed color to white when checked -ken */
 /* When the radio button is checked, add a background color */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
   background-color: white;
 }
 
@@ -429,7 +460,7 @@ label.container {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
   display: block;
 }
 
@@ -459,11 +490,11 @@ label.container {
   margin-bottom: 2px
 }
 
-.shareWith{
+.shareWith {
   display: none;
   width: 100%;
   height: 120px;
-  background-color:  navy;
+  background-color: navy;
   position: absolute;
   z-index: 5;
 }
@@ -487,9 +518,10 @@ label.container {
   display: block;
 }
 
-.dateRange input{
+.dateRange input {
   display: inline-block;
 }
+
 /* added css -ken */
 label.container {
   padding-left: 20px;
@@ -533,22 +565,29 @@ span.checkmark {
 }
 
 
-.eventButton, .groupButton, .shareButton, .extentionButton {
-/* modifiying the background color to transparent -ken */
-   background-color: transparent;
-   border: none;
-   color: white;
-   /* padding: 31px 75px; */
-   width: 100%;
-   height: 100%;
-   border-radius: 5px;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 16px;
+.eventButton,
+.groupButton,
+.shareButton,
+.extentionButton {
+  /* modifiying the background color to transparent -ken */
+  background-color: transparent;
+  border: none;
+  color: white;
+  /* padding: 31px 75px; */
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 /* changing the font of the buttons -ken */
-.eventButton, .groupButton, .shareButton, .extentionButton, a {
+.eventButton,
+.groupButton,
+.shareButton,
+.extentionButton,
+a {
   font-family: "AirbnbCerealApp-Bold";
 }
 
@@ -564,12 +603,14 @@ input[type=number] {
   color: white;
 
 }
+
 /* made input all align center -ken */
 div.shareContainer {
   text-align: center;
 }
 
-input#eName, input#eName1 {
+input#eName,
+input#eName1 {
   background-color: transparent;
   border-bottom: 1px solid white;
   border-top: none;
@@ -582,7 +623,8 @@ input#eName, input#eName1 {
   color: white;
 }
 
-input#location, input#location1 {
+input#location,
+input#location1 {
   background-color: transparent;
   border-bottom: 1px solid white;
   border-top: none;
@@ -601,7 +643,9 @@ input[type=date] {
 }
 
 /* changing css for the submit buttons -ken */
-#addEventSubmit, #groupEventSubmit, #shareSubmit {
+#addEventSubmit,
+#groupEventSubmit,
+#shareSubmit {
   width: 100%;
   background-color: transparent;
   border: 1px solid white;
@@ -611,6 +655,7 @@ input[type=date] {
   border-radius: 4px;
   cursor: pointer;
 }
+
 /* add notes section: ill take it out for now -ken
 textarea {
   background-color: transparent;
@@ -640,6 +685,7 @@ textarea {
   height: 0;
   width: 0;
 }
+
 /* changed the size of the checkbox in the extension button -ken */
 .checkmark {
   position: absolute;
@@ -665,8 +711,8 @@ textarea {
   display: block;
 }
 
-.check input:checked ~ .checkmark {
-    background-color: white;
+.check input:checked~.checkmark {
+  background-color: white;
 }
 
 /* Dialog div styling */
@@ -684,8 +730,9 @@ textarea {
   background-color: #CAA4A4;
 } */
 /* #dialog{ */
-  /* display: none; */
+/* display: none; */
 }
+
 /*
 Adding dropdown menu - ken
 */
@@ -741,12 +788,12 @@ Adding dropdown menu - ken
 /* ================================================================================================ */
 /* ===================== New Calender css is here   ===============================================*/
 /* ================================================================================================ */
-.calendar{
+.calendar {
   width: 100%;
   height: 80%;
 }
 
-.gridContainer{
+.gridContainer {
   margin-left: 2%;
   display: grid;
   grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%;
@@ -765,7 +812,7 @@ Adding dropdown menu - ken
   background-color: transparent;
 }
 
-.h3{
+.h3 {
   display: inline;
   margin-right: 70px;
   color: white;
@@ -778,40 +825,47 @@ Adding dropdown menu - ken
   display: inline;
 }
 
-.gridContainer div{
-/* background-color: #2196F3; */
+.gridContainer div {
+  /* background-color: #2196F3; */
 }
+
 /* /  height: 100%; */
 
-.day{
+.day {
   width: 100%;
 }
-.morning{
+
+.morning {
   height: 31.5%;
 }
-.morning  p{
+
+.morning p {
   display: inline;
   margin: 0px;
   padding: 0px;
 }
-.noon{
+
+.noon {
   height: 31.5%;
 }
-.noon p{
+
+.noon p {
   display: inline;
   margin: 0px;
   padding: 0px;
 }
-.evening{
+
+.evening {
   height: 31.5%;
 }
+
 .evening p {
   display: inline;
   margin: 0px;
   padding: 0px;
 }
 
-.gridContainer:hover div{
+.gridContainer:hover div {
   zoom: 1;
   filter: alpha(opacity=45);
   opacity: 0.35;
@@ -819,8 +873,8 @@ Adding dropdown menu - ken
 }
 
 /*Fade out the particular DIV when user hover on that DIV*/
-/* changed color for backgound and font -ken */
-.gridContainer div:hover{
+/* changed color for backgound and font */
+.gridContainer div:hover {
   zoom: 1.1;
   filter: alpha(opacity=100);
   opacity: 1;
@@ -898,12 +952,15 @@ footer p {
   text-align: center;
   border-radius: 20px;
 }
+
 .groupSchedulePopup h1 {
   margin-top: 60px;
 }
+
 .groupSchedulePopup p {
   margin-bottom: 50px;
 }
+
 .groupSchedulePopup span {
   margin-right: 20px;
   margin-left: 20px;
@@ -915,18 +972,23 @@ footer p {
   border-radius: 30px;
   padding: 0.25em 0.75em 0.25em 0.75em;
 }
+
 #morningspan {
   background-color: grey;
 }
+
 #afternoonspan {
   background-color: grey;
 }
+
 #eveningspan {
   background-color: grey;
 }
+
 #cancelspan {
   background-color: grey;
 }
+
 .groupSchedulePopup span:hover {
   filter: brightness(1.2);
   cursor: pointer;

@@ -1,85 +1,87 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
-    <script src="lib/myfbase.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
-    <script src="lib/authorization.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
+  <script src="lib/myfbase.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  <script src="lib/authorization.js"></script>
+</head>
+
+<body>
 
   <div id="particles-js"></div>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script type="text/javascript" src="lib/main.js"></script>
 
-     <script type="text/javascript">
-     var uiConfig = {
- callbacks: {
-   signInSuccessWithAuthResult: function(authResult, redirectUrl) {
-     // User successfully signed in.
-     // Return type determines whether we continue the redirect automatically
-     // or whether we leave that to developer to handle.
+  <script type="text/javascript">
+    var uiConfig = {
+      callbacks: {
+        signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+          // User successfully signed in.
+          // Return type determines whether we continue the redirect automatically
+          // or whether we leave that to developer to handle.
 
-     // david: creates a new database for the user if it is their first time signing in!
-     if(firebase.auth().currentUser.metadata.creationTime == firebase.auth().currentUser.metadata.lastSignInTime) {
-       newUserDatabase();
-       alert('Account and database created!');
-     } else {
-       alert('Welcome back!');
-     }
+          // david: creates a new database for the user if it is their first time signing in!
+          if (firebase.auth().currentUser.metadata.creationTime == firebase.auth().currentUser.metadata.lastSignInTime) {
+            newUserDatabase();
+            alert('Account and database created!');
+          } else {
+            alert('Welcome back!');
+          }
 
-     return true;
-   },
-   uiShown: function() {
-     // The widget is rendered.
-     // Hide the loader.
-     document.getElementById('loader').style.display = 'none';
-   }
- },
- // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
- signInFlow: 'popup',
- // **** david: redirecting users to schedule page on successful sign-up/login ****
- signInSuccessUrl: 'schedule_dash.html',
- signInOptions: [
-   // Leave the lines as is for the providers you want to offer your users.
-   firebase.auth.EmailAuthProvider.PROVIDER_ID
- ],
- // Terms of service url.
- tosUrl: '<your-tos-url>',
- // Privacy policy url.
- privacyPolicyUrl: '<your-privacy-policy-url>'
-};
-// Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
-// The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
-     </script>
-<div class="title">
+          return true;
+        },
+        uiShown: function () {
+          // The widget is rendered.
+          // Hide the loader.
+          document.getElementById('loader').style.display = 'none';
+        }
+      },
+      // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+      signInFlow: 'popup',
+      // **** david: redirecting users to schedule page on successful sign-up/login ****
+      signInSuccessUrl: 'schedule_dash.html',
+      signInOptions: [
+        // Leave the lines as is for the providers you want to offer your users.
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
+      ],
+      // Terms of service url.
+      tosUrl: '<your-tos-url>',
+      // Privacy policy url.
+      privacyPolicyUrl: '<your-privacy-policy-url>'
+    };
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+  <div class="title">
     <h1>The Schedule App</h1>
-</div>
-<div id="firebaseui-auth-container">
-</div>
-<div id="loader">Loading...</div>
+  </div>
+  <div id="firebaseui-auth-container">
+  </div>
+  <div id="loader">Loading...</div>
 
 
 
-<script type="text/javascript">
- var database = firebase.database();
-var headnode = "scheduleapp-a6d3a";
-var leadsRef = database.ref('something');
-leadsRef.on('value', function(snapshot) {
-  console.log( snapshot.val());
-  // console.log(data.name);
-  // snapshot.forEach(function(childSnapshot) {
-  //   var childData = childSnapshot.val();
-  });
+  <script type="text/javascript">
+    var database = firebase.database();
+    var headnode = "scheduleapp-a6d3a";
+    var leadsRef = database.ref('something');
+    leadsRef.on('value', function (snapshot) {
+      console.log(snapshot.val());
+      // console.log(data.name);
+      // snapshot.forEach(function(childSnapshot) {
+      //   var childData = childSnapshot.val();
+    });
+  </script>
 
-</script>
+</body>
 
-  </body>
 </html>

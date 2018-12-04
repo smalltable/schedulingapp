@@ -44,59 +44,59 @@
 
 <body>
   <!-- <div class="leftSide"> -->
-    <div class="topLeft">
-      <div class="greet">
-        <span class="greeting" id="user-greeting">Welcome back!</span>
+  <div class="topLeft">
+    <div class="greet">
+      <span class="greeting" id="user-greeting">Welcome back!</span>
+    </div>
+
+    <div class="menu">
+      <!-- added in reset and refresh calendar buttons -->
+      <div id="test"><span id="test-button">Refresh Calendar</span></div>
+      <div id="reset"><span id="reset-button">Reset Calendar</span></div>
+
+      <div class="signOut">
+        <!-- linked signout button to login screen -ken -->
+        <span class="signOutButton"><a href="./index.html">Sign Out</a></span>
       </div>
 
-      <div class="menu">
-        <!-- added in reset and refresh calendar buttons -->
-          <div id="test"><span id="test-button">Refresh Calendar</span></div>
-          <div id="reset"><span id="reset-button">Reset Calendar</span></div>
-
-        <div class="signOut">
-          <!-- linked signout button to login screen -ken -->
-          <span class="signOutButton"><a href="./index.html">Sign Out</a></span>
-        </div>
-
-        <!-- <div class="dropdown"> -->
-          <div class="hamIcon">
-            <span class="one"></span>
-            <span class="two"></span>
-            <span class="three"></span>
-            <span class="four"></span>
-          </div>
-          <!-- <div class="dropdown-content">
+      <!-- <div class="dropdown"> -->
+      <div class="hamIcon">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+      </div>
+      <!-- <div class="dropdown-content">
               <a href="#">Settings</a>
               <a href="./help.html">Help</a>
           </div> -->
-        <!-- </div> -->
-
-      </div>
-    </div>
-
-    <div id="rightSideNav">
-
-      <a href="#" class="closebtn">&times;</a>
-      <a href="#">Settings</a>
-      <a href="#" onclick="newDatabase();updateCalendar();">Reset Calendar</a>
-      <a href="./help.html">Help</a>
-      <a href="index.html">Sign Out</a>
+      <!-- </div> -->
 
     </div>
+  </div>
 
-    <div id="group-popup" class="groupSchedulePopup">
-      <h1>Your event schedule has been processed!</h1>
-      <br/><br/>
-      <p>Please choose one of the available times to add it to your schedule!<br/>Or cancel to choose another day.</p>
+  <div id="rightSideNav">
 
-      <span id="morningspan">Morning</span>
-      <span id="afternoonspan">Afternoon</span>
-      <span id="eveningspan">Evening</span>
-      <span id="cancelspan">Cancel</span>
-    </div>
+    <a href="#" class="closebtn">&times;</a>
+    <a href="#">Settings</a>
+    <a href="#" onclick="newDatabase();updateCalendar();">Reset Calendar</a>
+    <a href="./help.html">Help</a>
+    <a href="index.html">Sign Out</a>
 
-    <div class="leftSide">
+  </div>
+
+  <div id="group-popup" class="groupSchedulePopup">
+    <h1>Your event schedule has been processed!</h1>
+    <br /><br />
+    <p>Please choose one of the available times to add it to your schedule!<br />Or cancel to choose another day.</p>
+
+    <span id="morningspan">Morning</span>
+    <span id="afternoonspan">Afternoon</span>
+    <span id="eveningspan">Evening</span>
+    <span id="cancelspan">Cancel</span>
+  </div>
+
+  <div class="leftSide">
     <!-- david: updating calendar with ids for each day and time. -->
     <div class="calendar">
       <div class="gridContainer">
@@ -331,22 +331,22 @@
           <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
           <p><b>Select Date</b></p>
           <div class="dateRange">
-                <input id="eFrom" type="date" required="required" />
-                <br>
-                <br>
-                <!-- modified the checkbox input to add css -ken -->
-                <label class="container">
-                  <input id="eMorning" type="checkbox" name="morning" value="Morning">Morning
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">
-                  <input id="eNoon" type="checkbox" name="midDay" value="Mid Day">Noon
-                  <span class="checkmark"></span>
-                </label>
-                <label class="container">
-                  <input id="eEvening" type="checkbox" name="evening" value="Evening">Evening
-                  <span class="checkmark"></span>
-                </label>
+            <input id="eFrom" type="date" required="required" />
+            <br>
+            <br>
+            <!-- modified the checkbox input to add css -ken -->
+            <label class="container">
+              <input id="eMorning" type="checkbox" name="morning" value="Morning">Morning
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <input id="eNoon" type="checkbox" name="midDay" value="Mid Day">Noon
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">
+              <input id="eEvening" type="checkbox" name="evening" value="Evening">Evening
+              <span class="checkmark"></span>
+            </label>
           </div>
           <div class="groupAddFriends">
             <button type="button" name="addFriend">Add Friends</button>
@@ -377,7 +377,7 @@
           <input type="text" id="location1" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
           <p><b>Select Date</b></p>
           <div class="dateRange">
-                <input id="eFrom1" type="date" required="required" />
+            <input id="eFrom1" type="date" required="required" />
 
 
           </div>
@@ -419,7 +419,7 @@
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-<!-- deleted cloud extension, space overflowing -ken -->
+        <!-- deleted cloud extension, space overflowing -ken -->
       </div>
     </div>
   </div>
@@ -450,7 +450,7 @@
       projectId: "scheduleapp-a6d3a",
       storageBucket: "scheduleapp-a6d3a.appspot.com",
       messagingSenderId: "90892941151"
-      };
+    };
     firebase.initializeApp(config);
   </script>
   <script type="text/javascript" src="lib/input.js">

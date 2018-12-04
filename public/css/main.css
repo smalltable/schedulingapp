@@ -1,18 +1,22 @@
-*{
+* {
   padding: 0;
   margin: 0;
 }
+
 @font-face {
   font-family: 'AirbnbCerealApp-Bold';
   src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
 }
-#firebaseui-auth-container{
+
+#firebaseui-auth-container {
   padding-top: 66px;
 }
-input{
+
+input {
   display: block;
   margin: 0 auto;
 }
+
 .container {
   width: 400px;
   height: 420px;
@@ -20,39 +24,47 @@ input{
   background-color: lightgrey;
   border-radius: 25px;
 }
-.container h1{
+
+.container h1 {
   padding-top: 25px;
   text-align: center;
 }
-.top{
+
+.top {
   width: 100%;
   height: 75px;
 
 }
-.middle{
-width: 100%;
-height: 300px;
+
+.middle {
+  width: 100%;
+  height: 300px;
 
 }
-.bottom{
+
+.bottom {
   width: 100%;
   height: 50px;
 
 }
+
 .bottom a {
   text-decoration: none;
   font-size: 24px;
 }
-.right{
+
+.right {
   float: right;
   color: black;
 }
-.left{
+
+.left {
   float: left;
   color: black;
 }
 
-input[type=text], input[type=password]{
+input[type=text],
+input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 0px 0;
@@ -60,7 +72,8 @@ input[type=text], input[type=password]{
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=submit]{
+
+input[type=submit] {
   width: 100%;
   background-color: #4CAF50;
   color: white;
@@ -70,8 +83,9 @@ input[type=submit]{
   border-radius: 4px;
   cursor: pointer;
 }
-#particles-js{
-  position:absolute;
+
+#particles-js {
+  position: absolute;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(-140deg, #476CBD, #7DCFA2);
@@ -80,13 +94,15 @@ input[type=submit]{
   background-position: 50% 50%;
   z-index: -1;
 }
-.title{
+
+.title {
   margin: 0 auto;
   font-family: 'AirbnbCerealApp-Bold';
   padding-top: 55px;
   color: white;
 }
-h1{
+
+h1 {
   text-align: center;
 
 }

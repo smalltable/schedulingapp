@@ -226,7 +226,7 @@ function newUserDatabase() {
             "friendlist": {
                 "friend0": "test"
             },
-            
+
         });
 
     });
