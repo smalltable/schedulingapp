@@ -33,8 +33,8 @@
 
 
       $('.hamIcon').click(function(){
-        $('.dropdown-content').show();
-        $('.dropdown-content').style.display = "block";
+        // $('.dropdown-content').show();
+        // $('.dropdown-content').style.display = "block";
       })
 
     });
@@ -43,62 +43,68 @@
 </head>
 
 <body>
-  <div class="leftSide">
+  <!-- <div class="leftSide"> -->
     <div class="topLeft">
       <div class="greet">
-        <span class="greeting" id="user-greeting"></span>
+        <span class="greeting" id="user-greeting">Welcome back!</span>
       </div>
 
       <div class="menu">
-        <div class="dropdown">
+        <!-- added in reset and refresh calendar buttons -->
+          <div id="test"><span id="test-button">Refresh Calendar</span></div>
+          <div id="reset"><span id="reset-button">Reset Calendar</span></div>
+
+        <div class="signOut">
+          <!-- linked signout button to login screen -ken -->
+          <span class="signOutButton"><a href="./index.html">Sign Out</a></span>
+        </div>
+
+        <!-- <div class="dropdown"> -->
           <div class="hamIcon">
             <span class="one"></span>
             <span class="two"></span>
             <span class="three"></span>
             <span class="four"></span>
           </div>
-                  <!-- added dropdown menu - ken -->
-          <div class="dropdown-content">
+          <!-- <div class="dropdown-content">
               <a href="#">Settings</a>
               <a href="./help.html">Help</a>
-          </div>
-        </div>
-        <div class="signOut">
-          <!-- linked signout button to login screen -ken -->
-          <span class="signOutButton"><a href="./index.html">Sign Out</a></span>
-        </div>
+          </div> -->
+        <!-- </div> -->
+
       </div>
     </div>
 
+    <div class="leftSide">
     <!-- david: updating calendar with ids for each day and time. -->
     <div class="calendar">
       <div class="gridContainer">
         <div class="sunday" id="today">
           <div class="day">
-            <h3 class="h3">Sun</h3>
+            <h3 class="dayNames">Sun</h3>
             <br>
           </div>
           <div class="morning">
             <h3 class="h3">Morning</h3>
-            <p id='sun-morning-eventname'>Basketball Game</p>
+            <p id='sun-morning-eventname'>No event planned.</p>
             <br>
-            <p id='sun-morning-eventlocation'>Burnaby Campus</p>
+            <p id='sun-morning-eventlocation'></p>
             <br>
             <p id='sun-morning-eventfriends'></p>
           </div>
           <div class="noon">
             <h3 class="h3">Afternoon</h3>
-            <p id='sun-afternoon-eventname'>Basketball Game</p>
+            <p id='sun-afternoon-eventname'>No event planned.</p>
             <br>
-            <p id='sun-afternoon-eventlocation'>Burnaby Campus</p>
+            <p id='sun-afternoon-eventlocation'></p>
             <br>
             <p id='sun-afternoon-eventfriends'></p>
           </div>
           <div class="evening">
             <h3 class="h3">Evening</h3>
-            <p id='sun-evening-eventname'>Basketball Game</p>
+            <p id='sun-evening-eventname'>No event planned.</p>
             <br>
-            <p id='sun-evening-eventlocation'>Burnaby Campus</p>
+            <p id='sun-evening-eventlocation'></p>
             <br>
             <p id='sun-evening-eventfriends'></p>
           </div>
@@ -107,29 +113,29 @@
 
         <div class="monday">
           <div class="day">
-            <h3 class="h3">Mon</h3>
+            <h3 class="dayNames">Mon</h3>
           </div>
           <div class="morning">
             <h3 class="h3">Morning</h3>
-            <p id='mon-morning-eventname'>Basketball Game</p>
+            <p id='mon-morning-eventname'>No event planned.</p>
             <br>
-            <p id='mon-morning-eventlocation'>Burnaby Campus</p>
+            <p id='mon-morning-eventlocation'></p>
             <br>
             <p id='mon-morning-eventfriends'></p>
           </div>
           <div class="noon">
             <h3 class="h3">Afternoon</h3>
-            <p id='mon-afternoon-eventname'>Basketball Game</p>
+            <p id='mon-afternoon-eventname'>No event planned.</p>
             <br>
-            <p id='mon-afternoon-eventlocation'>Burnaby Campus</p>
+            <p id='mon-afternoon-eventlocation'></p>
             <br>
             <p id='mon-afternoon-eventfriends'></p>
           </div>
           <div class="evening">
             <h3 class="h3">Evening</h3>
-            <p id='mon-evening-eventname'>Basketball Game</p>
+            <p id='mon-evening-eventname'>No event planned.</p>
             <br>
-            <p id='mon-evening-eventlocation'>Burnaby Campus</p>
+            <p id='mon-evening-eventlocation'></p>
             <br>
             <p id='mon-evening-eventfriends'></p>
           </div>
@@ -138,29 +144,29 @@
 
         <div class="tuesday">
           <div class="day">
-            <h3 class="h3">Tue</h3>
+            <h3 class="dayNames">Tue</h3>
           </div>
           <div class="morning">
             <h3 class="h3">Morning</h3>
-            <p id='tue-morning-eventname'>Basketball Game</p>
+            <p id='tue-morning-eventname'>No event planned.</p>
             <br>
-            <p id='tue-morning-eventlocation'>Burnaby Campus</p>
+            <p id='tue-morning-eventlocation'></p>
             <br>
             <p id='tue-morning-eventfriends'></p>
           </div>
           <div class="noon">
             <h3 class="h3">Afternoon</h3>
-            <p id='tue-afternoon-eventname'>Basketball Game</p>
+            <p id='tue-afternoon-eventname'>No event planned.</p>
             <br>
-            <p id='tue-afternoon-eventlocation'>Burnaby Campus</p>
+            <p id='tue-afternoon-eventlocation'></p>
             <br>
             <p id='tue-afternoon-eventfriends'></p>
           </div>
           <div class="evening">
             <h3 class="h3">Evening</h3>
-            <p id='tue-evening-eventname'>Basketball Game</p>
+            <p id='tue-evening-eventname'>No event planned.</p>
             <br>
-            <p id='tue-evening-eventlocation'>Burnaby Campus</p>
+            <p id='tue-evening-eventlocation'></p>
             <br>
             <p id='tue-evening-eventfriends'></p>
           </div>
@@ -169,29 +175,29 @@
 
         <div class="wednesday">
           <div class="day">
-            <h3 class="h3">Wed</h3>
+            <h3 class="dayNames">Wed</h3>
           </div>
           <div class="morning">
             <h3 class="h3">Morning</h3>
-            <p id='wed-morning-eventname'>Basketball Game</p>
+            <p id='wed-morning-eventname'>No event planned.</p>
             <br>
-            <p id='wed-morning-eventlocation'>Burnaby Campus</p>
+            <p id='wed-morning-eventlocation'></p>
             <br>
             <p id='wed-morning-eventfriends'></p>
           </div>
           <div class="noon">
             <h3 class="h3">Afternoon</h3>
-            <p id='wed-afternoon-eventname'>Basketball Game</p>
+            <p id='wed-afternoon-eventname'>No event planned.</p>
             <br>
-            <p id='wed-afternoon-eventlocation'>Burnaby Campus</p>
+            <p id='wed-afternoon-eventlocation'></p>
             <br>
             <p id='wed-afternoon-eventfriends'></p>
           </div>
           <div class="evening">
             <h3 class="h3">Evening</h3>
-            <p id='wed-evening-eventname'>Basketball Game</p>
+            <p id='wed-evening-eventname'>No event planned.</p>
             <br>
-            <p id='wed-evening-eventlocation'>Burnaby Campus</p>
+            <p id='wed-evening-eventlocation'></p>
             <br>
             <p id='wed-evening-eventfriends'></p>
           </div>
@@ -200,29 +206,29 @@
 
         <div class="thursday">
           <div class="day">
-            <h3 class="h3">Thu</h3>
+            <h3 class="dayNames">Thu</h3>
           </div>
           <div class="morning">
             <h3 class="h3">Morning</h3>
-            <p id='thu-morning-eventname'>Basketball Game</p>
+            <p id='thu-morning-eventname'>No event planned.</p>
             <br>
-            <p id='thu-morning-eventlocation'>Burnaby Campus</p>
+            <p id='thu-morning-eventlocation'></p>
             <br>
             <p id='thu-morning-eventfriends'></p>
           </div>
           <div class="noon">
             <h3 class="h3">Afternoon</h3>
-            <p id='thu-afternoon-eventname'>Basketball Game</p>
+            <p id='thu-afternoon-eventname'>No event planned.</p>
             <br>
-            <p id='thu-afternoon-eventlocation'>Burnaby Campus</p>
+            <p id='thu-afternoon-eventlocation'></p>
             <br>
             <p id='thu-afternoon-eventfriends'></p>
           </div>
           <div class="evening">
             <h3 class="h3">Evening</h3>
-            <p id='thu-evening-eventname'>Basketball Game</p>
+            <p id='thu-evening-eventname'>No event planned.</p>
             <br>
-            <p id='thu-evening-eventlocation'>Burnaby Campus</p>
+            <p id='thu-evening-eventlocation'></p>
             <br>
             <p id='thu-evening-eventfriends'></p>
           </div>
@@ -231,29 +237,29 @@
 
         <div class="friday">
           <div class="day">
-            <h3 class="h3">Fri</h3>
+            <h3 class="dayNames">Fri</h3>
           </div>
           <div class="morning">
             <h3 class="h3">Morning</h3>
-            <p id='fri-morning-eventname'>Basketball Game</p>
+            <p id='fri-morning-eventname'>No event planned.</p>
             <br>
-            <p id='fri-morning-eventlocation'>Burnaby Campus</p>
+            <p id='fri-morning-eventlocation'></p>
             <br>
             <p id='fri-morning-eventfriends'></p>
           </div>
           <div class="noon">
             <h3 class="h3">Afternoon</h3>
-            <p id='fri-afternoon-eventname'>Basketball Game</p>
+            <p id='fri-afternoon-eventname'>No event planned.</p>
             <br>
-            <p id='fri-afternoon-eventlocation'>Burnaby Campus</p>
+            <p id='fri-afternoon-eventlocation'></p>
             <br>
             <p id='fri-afternoon-eventfriends'></p>
           </div>
           <div class="evening">
             <h3 class="h3">Evening</h3>
-            <p id='fri-evening-eventname'>Basketball Game</p>
+            <p id='fri-evening-eventname'>No event planned.</p>
             <br>
-            <p id='fri-evening-eventlocation'>Burnaby Campus</p>
+            <p id='fri-evening-eventlocation'></p>
             <br>
             <p id='fri-evening-eventfriends'></p>
           </div>
@@ -262,29 +268,29 @@
 
         <div class="saturday">
           <div class="day">
-            <h3 class="h3">Sat</h3>
+            <h3 class="dayNames">Sat</h3>
           </div>
           <div class="morning">
             <h3 class="h3">Morning</h3>
-            <p id='sat-morning-eventname'>Basketball Game</p>
+            <p id='sat-morning-eventname'>No event planned.</p>
             <br>
-            <p id='sat-morning-eventlocation'>Burnaby Campus</p>
+            <p id='sat-morning-eventlocation'></p>
             <br>
             <p id='sat-morning-eventfriends'></p>
           </div>
           <div class="noon">
             <h3 class="h3">Afternoon</h3>
-            <p id='sat-afternoon-eventname'>Basketball Game</p>
+            <p id='sat-afternoon-eventname'>No event planned.</p>
             <br>
-            <p id='sat-afternoon-eventlocation'>Burnaby Campus</p>
+            <p id='sat-afternoon-eventlocation'></p>
             <br>
             <p id='sat-afternoon-eventfriends'></p>
           </div>
           <div class="evening">
             <h3 class="h3">Evening</h3>
-            <p id='sat-evening-eventname'>Basketball Game</p>
+            <p id='sat-evening-eventname'>No event planned.</p>
             <br>
-            <p id='sat-evening-eventlocation'>Burnaby Campus</p>
+            <p id='sat-evening-eventlocation'></p>
             <br>
             <p id='sat-evening-eventfriends'></p>
           </div>
@@ -398,8 +404,6 @@
   </div>
 
   <!-- david: removing test button -->
-  <div id="test"><button id="test-button">Refresh Calendar</button></div>
-  <div id="reset"><button id="reset-button">Reset Calendar</button></div>
 
   <!--Hey, I am adding a new script file -Pamir  -->
   <script type="text/javascript" src="lib/app.js"></script>

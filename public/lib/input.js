@@ -211,6 +211,7 @@ $('#test-button').click(function() {
   updateCalendar();
 })
 
+var gridCont = document.getElementsByClassName('gridContainer');
 
 function updateCalendar() {
   var d = new Date(eventFrom0);
@@ -642,7 +643,18 @@ function updateCalendar() {
         sunEveningFriends = document.getElementById('sun-evening-eventfriends').innerHTML = "";
       }
     
-
+      // var gridCont = document.getElementsByClassName('gridContainer');
+      var paras = gridCont[0].getElementsByTagName('p');
+      for (i = 0; i < paras.length; i++) {
+        if (paras[i].innerText == "No event planned.") {
+          paras[i].style.backgroundColor = "transparent";
+          paras[i].style.fontWeight = "lighter";
+        } else {
+          paras[i].style.backgroundColor = "rgb(79, 79, 187)";
+          paras[i].style.fontWeight = "bold";
+        }
+      
+      }
     });
 }
 
@@ -866,4 +878,14 @@ function newDatabase() {
 $('#reset-button').click(function(){
   newDatabase();
   updateCalendar();
+})
+
+$(document).ready(function() {
+  var paras = gridCont[0].getElementsByTagName('p');
+      for (i = 0; i < paras.length; i++) {
+        if (paras[i].innerText == "No event planned.") {
+          paras[i].style.backgroundColor = "transparent";
+          paras[i].style.fontWeight = "lighter";
+        }
+      }
 })

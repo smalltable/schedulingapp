@@ -56,14 +56,14 @@ $(".btnShare").click(function(){
   $(".shareWith").fadeToggle("slide");
 });
 
-$(document).ready(function(){
-  var userId = firebase.auth().currentUser.uid;
-  var userRef = firebase.database().ref("users/" + userId)
-  userRef.once('value').then(function(snapshot) {
-    var userName = userRef.snapshot.child('name').val();
-  });
-  document.getElementsById('#user-greeting').innerHTML = "Welcome back," + userName;
-})
+// $(document).ready(function(){
+//   var userId = firebase.auth().currentUser.uid;
+//   var userRef = firebase.database().ref("users/" + userId)
+//   userRef.once('value').then(function(snapshot) {
+//     var userName = userRef.snapshot.child('name').val();
+//   });
+//   document.getElementsById('#user-greeting').innerHTML = "Welcome back," + userName;
+// })
 
 // Firebase database
 
