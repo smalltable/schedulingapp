@@ -14,11 +14,12 @@ function openNav() {
   document.getElementById("rightSideNav").style.width = "175px";
   // $('.topLeft, .leftSide, .rightSide').css('filter','blur(5px)');
   $('.topLeft, .leftSide, .rightSide, footer').css('-webkit-animation','image_blur 1s');
-  $('.topLeft, .leftSide, .rightSide, footer').css('filter','blur(5px)');
+  $('.topLeft, .leftSide, .rightSide, footer').css('filter','blur(10px)');
 }
 
 function closeNav() {
   document.getElementById("rightSideNav").style.width = "0";
+  $('.topLeft, .leftSide, .rightSide, footer').css('-webkit-animation','image_blur_reverse 1s');
   $('.topLeft, .leftSide, .rightSide, footer').css('filter','blur(0px)');
 }
 
