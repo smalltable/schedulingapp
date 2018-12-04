@@ -1,3 +1,9 @@
+/* added font type -ken */
+@font-face {
+  font-family: 'AirbnbCerealApp-Bold';
+  src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+}
+
 /* made css -ken */
 * {
   margin: 0;
