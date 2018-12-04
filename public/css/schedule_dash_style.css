@@ -924,6 +924,9 @@ footer p {
 #eveningspan {
   background-color: grey;
 }
+#cancelspan {
+  background-color: grey;
+}
 .groupSchedulePopup span:hover {
   filter: brightness(1.2);
   cursor: pointer;

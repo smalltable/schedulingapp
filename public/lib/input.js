@@ -196,6 +196,10 @@ $('#eveningspan').click(function() {
   updateCalendar();
 });
 
+$('#cancelspan').click(function() {
+  closePopup();
+})
+
 function openPopup() {
   $('.groupSchedulePopup').css('display', 'block');
   $('.topLeft, .leftSide, .rightSide, footer').css('-webkit-animation','image_blur 1s');
