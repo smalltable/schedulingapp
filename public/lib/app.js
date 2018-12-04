@@ -1,8 +1,26 @@
 
 // hamburger rotation
 $(".hamIcon").click(function() {
-  $(this).toggleClass("open")
+  // $(this).toggleClass("open")
+  openNav();
 });
+
+$(".closebtn").click(function() {
+  closeNav();
+})
+
+// david: open and close side bar nav!
+function openNav() {
+  document.getElementById("rightSideNav").style.width = "175px";
+  // $('.topLeft, .leftSide, .rightSide').css('filter','blur(5px)');
+  $('.topLeft, .leftSide, .rightSide').css('-webkit-animation','image_blur 1s');
+  $('.topLeft, .leftSide, .rightSide').css('filter','blur(5px)');
+}
+
+function closeNav() {
+  document.getElementById("rightSideNav").style.width = "0";
+  $('.topLeft, .leftSide, .rightSide').css('filter','blur(0px)');
+}
 
 
 $(".eventButton").click(function() {
