@@ -757,11 +757,12 @@ Adding dropdown menu - ken
 }
 
 /* changed font style for the detail -ken */
+/* changed background color to transparent -ken */
 .gridContainer p {
   font-weight: bold;
   font-family: sans-serif;
   font-size: 10pt;
-  background-color: rgb(79, 79, 187);
+  background-color: transparent;
 }
 
 .h3{

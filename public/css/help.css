@@ -2,12 +2,15 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  padding: 0;
 }
-
+/* added font type and color white -ken */
 body, html {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(-140deg, #476CBD, #7DCFA2);
+  font-family: "AirbnbCerealApp-Bold";
+  color: white;
 }
 
 .top-wrapper {
@@ -42,36 +45,52 @@ body, html {
   border-bottom: 1px solid white;
 }
 
+.middle-wrapper h1 {
+  color: white;
+  font-size: 23pt;
+}
+
 .middle-wrapper {
   height:70%;
   background-color: transparent;
-  text-align: center;
+  padding-top: 30px;
 }
 
+.middle-wrapper p {
+  color: white;
+  font-weight:300;
+}
+/* changed background color to transparent -ken */
 .container {
   display: block;
   width: 800px;
   height: 150px;
   background-color: white;
   border-radius: 4px;
-  margin: 50px auto;
-  text-align: center;
+  margin: 30px auto;
+  background-color: transparent;
 }
 
 .foot-wrapper {
-  height: 8%;
-  background-color: #234667;
-  color: white;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  clear: both;
+  position: absolute;
+      overflow: hidden;
+      bottom: 0px;
+      background-color: #6c7180;
+      width: 100%;
+      height: 50px;
+      z-index: 0;
+
 }
 
-.foot-wrapper h2 {
-  font-size: 16pt;
+.foot-wrapper p {
+  margin-left: 100px;
+    margin-top: 15px;
+}
+/* added p element css -ken */
+p {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
