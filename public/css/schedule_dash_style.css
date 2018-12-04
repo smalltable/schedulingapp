@@ -333,7 +333,7 @@ input#addEventSubmit {
   font-size: 13pt;
 }
 /* added css -ken */
-input#eFrom {
+input#eFrom, input#eFrom1 {
   display: inline-block;
   margin-top: 13px;
   margin-bottom: 20px;
@@ -462,10 +462,14 @@ label.container {
 .shareWith{
   display: none;
   width: 100%;
-  height: 200px;
-  background-color:  transparent;
+  height: 120px;
+  background-color:  navy;
   position: absolute;
   z-index: 5;
+}
+
+.shareWith li {
+  list-style: none;
 }
 
 .shareContainer {
@@ -565,7 +569,7 @@ div.shareContainer {
   text-align: center;
 }
 
-input#eName {
+input#eName, input#eName1 {
   background-color: transparent;
   border-bottom: 1px solid white;
   border-top: none;
@@ -578,7 +582,7 @@ input#eName {
   color: white;
 }
 
-input#location {
+input#location, input#location1 {
   background-color: transparent;
   border-bottom: 1px solid white;
   border-top: none;
@@ -879,3 +883,47 @@ footer p {
   text-decoration: none;
   cursor: pointer;
 } */
+
+.groupSchedulePopup {
+  position: fixed;
+  display: none;
+  height: 350px;
+  width: 700px;
+  background-color: rgb(20, 128, 179);
+  /* filter: opacity(0.9); */
+  margin-left: 400px;
+  margin-top: 50px;
+  z-index: 1;
+  text-align: center;
+  border-radius: 20px;
+}
+.groupSchedulePopup h1 {
+  margin-top: 60px;
+}
+.groupSchedulePopup p {
+  margin-bottom: 50px;
+}
+.groupSchedulePopup span {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16pt;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border: 2.5px solid white;
+  border-radius: 30px;
+  padding: 0.25em 0.75em 0.25em 0.75em;
+}
+#morningspan {
+  background-color: grey;
+}
+#afternoonspan {
+  background-color: grey;
+}
+#eveningspan {
+  background-color: grey;
+}
+.groupSchedulePopup span:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}

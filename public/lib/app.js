@@ -23,11 +23,10 @@ function closeNav() {
   $('.topLeft, .leftSide, .rightSide, footer').css('filter','blur(0px)');
 }
 
-
 $(".eventButton").click(function() {
   $("#shareCalendar").fadeToggle("fast");
   // $("#shareCalendar").fadeToggle("fast");
-$("#extensions").fadeToggle("fast");
+  $("#extensions").fadeToggle("fast");
   $(".addContainer").toggle("fold", 1000);
 });
 
@@ -72,6 +71,17 @@ for (let i = 0; i < li0.length; i++) {
   });
 }
 $(".btnShare").click(function(){
+  $(".shareWith").fadeToggle("slide");
+});
+
+var ul1 = $(".shareList1");
+var li1 = ul1[0].getElementsByTagName("li");
+for (let i = 0; i < li1.length; i++) {
+  li1[i].addEventListener("click", function() {
+    $(li1[i]).toggleClass("selected");
+  });
+}
+$(".shareSubmit").click(function(){
   $(".shareWith").fadeToggle("slide");
 });
 

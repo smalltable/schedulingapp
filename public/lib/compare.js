@@ -14,7 +14,7 @@ function scheduleCompare() {
     .orderByChild('name').equalTo(shareWith[k]);
     var finalResult = [];
 
-    for (k = 0; k < shareWith.length(); i++) {
+    for (k = 0; k < shareWith.length(); k++) {
         var result1 = [];
         var result2 = [];
         var user2Id = firebase.database().child('users').orderByChild('name').equalTo(shareWith[k]);

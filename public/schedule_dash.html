@@ -85,6 +85,16 @@
 
     </div>
 
+    <div id="group-popup" class="groupSchedulePopup">
+      <h1>Your event schedule has been processed!</h1>
+      <br/><br/>
+      <p>Please choose one of the available times to add it to your schedule!<br/>Or cancel to choose another day.</p>
+
+      <span id="morningspan">Morning</span>
+      <span id="afternoonspan">Afternoon</span>
+      <span id="eveningspan">Evening</span>
+    </div>
+
     <div class="leftSide">
     <!-- david: updating calendar with ids for each day and time. -->
     <div class="calendar">
@@ -343,10 +353,10 @@
 
           <div class="shareWith">
             <ul class="shareList">
-              <li>Eric SteinGraber</li>
-              <li>Nora Ezawa</li>
-              <li>Ginevra Orlandi Contucci</li>
-              <li>Lena Arinmis</li>
+              <li>David Wang</li>
+              <li>Pamir Kantar</li>
+              <li>Ken Okiebisu</li>
+              <li>Steve Jobs</li>
             </ul>
             <button class="btnShare" type="button" name="button">Share</button>
           </div>
@@ -359,14 +369,14 @@
 
     <div class="functionButton" id="shareCalendar">
       <!-- <h2>Share Calender</h2> -->
-      <button type="button" class="shareButton">Group event</button>
+      <button type="button" class="shareButton">Group Event</button>
       <div class="shareContainer">
         <form class="addInput" action="index.html" method="post">
-          <input type="text" id="eName" placeholder="Event Name" pattern="[A-Za-z0-9]{2,20}" required="required" />
-          <input type="text" id="location" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <input type="text" id="eName1" placeholder="Event Name" pattern="[A-Za-z0-9]{2,20}" required="required" />
+          <input type="text" id="location1" placeholder="Location" pattern="[A-Za-z0-9]{2,20}" required="required" />
           <p><b>Select Date</b></p>
           <div class="dateRange">
-                <input id="eFrom" type="date" required="required" />
+                <input id="eFrom1" type="date" required="required" />
 
 
           </div>
@@ -375,17 +385,17 @@
           </div>
 
           <div class="shareWith">
-            <ul class="shareList">
-              <li>Eric SteinGraber</li>
-              <li>Nora Ezawa</li>
-              <li>Ginevra Orlandi Contucci</li>
-              <li>Lena Arinmis</li>
+            <ul class="shareList1">
+              <li>David Wang</li>
+              <li>Pamir Kantar</li>
+              <li>Ken Okiebisu</li>
+              <li>Steve Jobs</li>
             </ul>
-            <button class="btnShare" type="button" name="button">Share</button>
+            <button class="shareSubmit" type="button" name="button">Share</button>
           </div>
           <br>
 
-          <input type="button" name="submit" value="Submit" id="addEventSubmit">
+          <input type="button" name="submit" value="Submit" id="groupEventSubmit">
         </form>
       </div>
     </div>

@@ -112,38 +112,102 @@ $("#groupEventSubmit").click(function() {
     if(empty1.length) {
         alert("Please fill all inputs");
     } else {
-       eventName1 = $('.addInput > #eName').val();
-       eventLocation1 = $('.addInput > #location').val();
-       eventFrom1 = $('#eFrom').val();
-       note1 = $('#area0').val();
-       evening1 = false;
-       noon1 = false;
-       morning1 = false;
-      if ($('#gMorning').is(":checked"))
-      {
-       console.log("Morning checked");
-        morning0 = true;
-      }
-      if ($('#gNoon').is(":checked"))
-      {
-       console.log("Noon checked");
-        noon0 = true;
-      }
-      if ($('#gEvening').is(":checked"))
-      {
-       console.log("Evening checked");
-        evening = true;
-      }
-      // If none checked then it is considered all they.
-      if(!(evening1 && noon1 && morning1)){
-        morning1 = true;
-        noon1 = true;
-        evening1 = true;
-      }
-        $(".groupContainer").toggle("fold", 1000);
+       eventName1 = $('.addInput > #eName1').val();
+       eventLocation1 = $('.addInput > #location1').val();
+       eventFrom1 = $('#eFrom1').val();
+      //  note1 = $('#area0').val();
+      //  evening1 = false;
+      //  noon1 = false;
+      //  morning1 = false;
+      // if ($('#gMorning').is(":checked"))
+      // {
+      //  console.log("Morning checked");
+      //   morning0 = true;
+      // }
+      // if ($('#gNoon').is(":checked"))
+      // {
+      //  console.log("Noon checked");
+      //   noon0 = true;
+      // }
+      // if ($('#gEvening').is(":checked"))
+      // {
+      //  console.log("Evening checked");
+      //   evening = true;
+      // }
+      // // If none checked then it is considered all they.
+      // if(!(evening1 && noon1 && morning1)){
+      //   morning1 = true;
+      //   noon1 = true;
+      //   evening1 = true;
+      // }
+        $(".shareContainer").toggle("fold", 1000);
+        $("#extensions").fadeToggle("fast");
+        $("#addEvent").fadeToggle("fast");
         console.log("Run");
+
+        scheduleCompare();
+        openPopup();
     }
 });
+
+$('#morningspan').click(function() {
+  closePopup();
+  var d = new Date(eventFrom1);
+  var dayOfWeek = "day" + d.getDay();
+  var userId = firebase.auth().currentUser.uid;
+  firebase.database().ref("users/" + userId + "/calendar/week48/" + dayOfWeek).update({
+    "morning": {
+    "event": true,
+    "eventName": eventName1,
+    "eventLocation": eventLocation1,
+    "eventFriends": shareWith
+    }
+  });
+  updateCalendar();
+});
+$('#afternoonspan').click(function() {
+  closePopup();
+  var d = new Date(eventFrom1);
+  var dayOfWeek = "day" + d.getDay();
+  var userId = firebase.auth().currentUser.uid;
+  firebase.database().ref("users/" + userId + "/calendar/week48/" + dayOfWeek).update({
+    "afternoon": {
+    "event": true,
+    "eventName": eventName1,
+    "eventLocation": eventLocation1,
+    "eventFriends": shareWith
+    }
+  });
+  updateCalendar();
+});
+$('#eveningspan').click(function() {
+  closePopup();
+  var d = new Date(eventFrom1);
+  var dayOfWeek = "day" + d.getDay();
+  var userId = firebase.auth().currentUser.uid;
+  firebase.database().ref("users/" + userId + "/calendar/week48/" + dayOfWeek).update({
+    "night": {
+    "event": true,
+    "eventName": eventName1,
+    "eventLocation": eventLocation1,
+    "eventFriends": shareWith
+    }
+  });
+  updateCalendar();
+});
+
+function openPopup() {
+  $('.groupSchedulePopup').css('display', 'block');
+  $('.topLeft, .leftSide, .rightSide, footer').css('-webkit-animation','image_blur 1s');
+  $('.topLeft, .leftSide, .rightSide, footer').css('filter','blur(10px)');
+}
+
+function closePopup() {
+  $('.groupSchedulePopup').css('display', 'none');
+  $('.topLeft, .leftSide, .rightSide, footer').css('-webkit-animation','image_blur_reverse 1s');
+  $('.topLeft, .leftSide, .rightSide, footer').css('filter','blur(0px)');
+}
+
 // ================= Group Event Dialog ====================
 // This jquery method is cursed don't use it EVER!
 // ===========================================================
@@ -161,7 +225,7 @@ $("#groupEventSubmit").click(function() {
 // ==================== Share Calendar =======================
 // ===========================================================
   var shareWith = [];
-$("#shareSubmit").click(function(){
+$(".shareSubmit").click(function(){
    $(this).parent().find('li').each(function(i){
     if($(this).hasClass('selected')){
       if(shareWith.includes($(this).text())){
@@ -171,10 +235,10 @@ $("#shareSubmit").click(function(){
       }
     }
   });
-  $("#addEvent").fadeToggle("fast");
+  // $("#addEvent").fadeToggle("fast");
   // $("#groupEvent").fadeToggle("fast");
-  $("#extensions").fadeToggle("fast");
-  $(".shareContainer").toggle("fold", 1000);
+  // $("#extensions").fadeToggle("fast");
+  // $(".shareContainer").toggle("fold", 1000);
 });
 // ============= Add event == Friend List ======================
 var shareWith0 = [];
@@ -889,3 +953,230 @@ $(document).ready(function() {
         }
       }
 })
+
+
+function findUsersByName(name) {
+  var fb = firebase.database().ref();
+  fb.child('users').orderByChild('name').equalTo(name).once('value', function(snap) {
+      console.log(snap.val());
+  });
+}
+
+var d = new Date(eventFrom1);
+var user1Morning;
+var user1Afternoon;
+var user1Evening;
+
+
+// compare engine
+function scheduleCompare() {
+    // user1.calendar.week.day (morning, afternoon, night) compareTo user2.calendar.week.day (morning, afternoon, night) -- return all results were user1 && user2 is false.
+    var d = new Date(eventFrom1);
+    var dayOfWeek = "day" + d.getDay();
+
+    var userCompare;
+    var user2MorningEvent;
+    var user2AfternoonEvent;
+    var user2EveningEvent;
+    
+    switch(d.getDay()) {
+      case 0:
+        if ($('#mon-morning-eventname')[0].innerText == "No event planned.") {
+          user1Morning = false;
+        } else {
+          user1Morning = true;
+        }
+        break;
+      case 1:
+        if ($('#tue-morning-eventname')[0].innerText == "No event planned.") {
+          user1Morning = false;
+        } else {
+          user1Morning = true;
+        }
+        break;
+      case 2:
+        if ($('#wed-morning-eventname')[0].innerText == "No event planned.") {
+          user1Morning = false;
+        } else {
+          user1Morning = true;
+        }
+        break;
+      case 3:
+        if ($('#thu-morning-eventname')[0].innerText == "No event planned.") {
+          user1Morning = false;
+        } else {
+          user1Morning = true;
+        }
+        break;
+      case 4:
+        if ($('#fri-morning-eventname')[0].innerText == "No event planned.") {
+          user1Morning = false;
+        } else {
+          user1Morning = true;
+        }
+        break;
+      case 5:
+        if ($('#sat-morning-eventname')[0].innerText == "No event planned.") {
+          user1Morning = false;
+        } else {
+        user1Morning = true;
+        }
+        break;
+      case 6:
+        if ($('#sun-morning-eventname')[0].innerText == "No event planned.") {
+          user1Morning = false;
+        } else {
+          user1Morning = true;
+        }
+        break;
+    }
+
+    switch(d.getDay()) {
+      case 0:
+        if ($('#mon-afternoon-eventname')[0].innerText == "No event planned.") {
+          user1Afternoon = false;
+        } else {
+          user1Afternoon = true;
+        }
+        break;
+      case 1:
+        if ($('#tue-afternoon-eventname')[0].innerText == "No event planned.") {
+          user1Afternoon = false;
+        } else {
+          user1Afternoon = true;
+        }
+        break;
+      case 2:
+        if ($('#wed-afternoon-eventname')[0].innerText == "No event planned.") {
+          user1Afternoon = false;
+        } else {
+          user1Afternoon = true;
+        }
+        break;
+      case 3:
+        if ($('#thu-afternoon-eventname')[0].innerText == "No event planned.") {
+          user1Afternoon = false;
+        } else {
+          user1Afternoon = true;
+        }
+        break;
+      case 4:
+        if ($('#fri-afternoon-eventname')[0].innerText == "No event planned.") {
+          user1Afternoon = false;
+        } else {
+          user1Afternoon = true;
+        }
+        break;
+      case 5:
+        if ($('#sat-afternoon-eventname')[0].innerText == "No event planned.") {
+          user1Afternoon = false;
+        } else {
+        user1Afternoon = true;
+        }
+        break;
+      case 6:
+        if ($('#sun-afternoon-eventname')[0].innerText == "No event planned.") {
+          user1Afternoon = false;
+        } else {
+          user1Afternoon = true;
+        }
+        break;
+    }
+
+    switch(d.getDay()) {
+      case 0:
+        if ($('#mon-evening-eventname')[0].innerText == "No event planned.") {
+          user1Evening = false;
+        } else {
+          user1Evening = true;
+        }
+        break;
+      case 1:
+        if ($('#tue-evening-eventname')[0].innerText == "No event planned.") {
+          user1Evening = false;
+        } else {
+          user1Evening = true;
+        }
+        break;
+      case 2:
+        if ($('#wed-evening-eventname')[0].innerText == "No event planned.") {
+          user1Evening = false;
+        } else {
+          user1Evening = true;
+        }
+        break;
+      case 3:
+        if ($('#thu-evening-eventname')[0].innerText == "No event planned.") {
+          user1Evening = false;
+        } else {
+          user1Evening = true;
+        }
+        break;
+      case 4:
+        if ($('#fri-evening-eventname')[0].innerText == "No event planned.") {
+          user1Evening = false;
+        } else {
+          user1Evening = true;
+        }
+        break;
+      case 5:
+        if ($('#sat-evening-eventname')[0].innerText == "No event planned.") {
+          user1Evening = false;
+        } else {
+          user1Evening = true;
+        }
+        break;
+      case 6:
+        if ($('#sun-evening-eventname')[0].innerText == "No event planned.") {
+          user1Evening = false;
+        } else {
+          user1Evening = true;
+        }
+        break;
+    }
+
+
+    for (let k = 0; k < shareWith.length; k++) {
+      switch(shareWith[k]) {
+        case "Ken Okiebisu":
+          userCompare = "2kVp1TSdxoTmI9W6XkGlqbdG2Z73";
+          break;
+        case "Pamir Kantar":
+          userCompare = "LjgUtD0ntiXJkPXsZJvYUG6NDKy2"
+          break;
+        case "Steve Jobs":
+          userCompare = "QfmvAIHoUwcJkKyNiCNyjUBOnk13";
+          break;
+        case "David Wang":
+          userCompare = "hIqGxQ9pQIVX3DQ9a1oIiYK8VOO2";
+          break;
+      }
+    }
+
+      var userRef2 = firebase.database().ref("users/" + userCompare + '/calendar/week48');
+      userRef2.once('value').then(function(snapshot) {
+        user2MorningEvent = snapshot.child(dayOfWeek + '/morning/event').val();
+        user2AfternoonEvent = snapshot.child(dayOfWeek + '/afternoon/event').val();
+        user2EveningEvent = snapshot.child(dayOfWeek + '/night/event').val();
+
+
+        if (user2MorningEvent || user1Morning) {
+          $('#morningspan').css('background-color', 'rgb(172, 6, 6)');
+        } else {
+          $('#morningspan').css('background-color', 'rgb(50, 177, 0)');
+        }
+  
+        if (user2AfternoonEvent || user1Afternoon) {
+          $('#afternoonspan').css('background-color', 'rgb(172, 6, 6)');
+        } else {
+          $('#afternoonspan').css('background-color', 'rgb(50, 177, 0)');
+        }
+  
+        if (user2EveningEvent || user1Evening) {
+          $('#eveningspan').css('background-color', 'rgb(172, 6, 6)');
+        } else {
+          $('#eveningspan').css('background-color', 'rgb(50, 177, 0)');
+        }
+
+      });
+}
