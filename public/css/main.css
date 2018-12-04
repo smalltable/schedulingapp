@@ -2,8 +2,12 @@
   padding: 0;
   margin: 0;
 }
+@font-face {
+  font-family: 'AirbnbCerealApp-Bold';
+  src: url('../fonts/AirbnbCereal-Bold.ttf') format("truetype");
+}
 #firebaseui-auth-container{
-  padding-top: 160px;
+  padding-top: 66px;
 }
 input{
   display: block;
@@ -75,4 +79,14 @@ input[type=submit]{
   background-size: cover;
   background-position: 50% 50%;
   z-index: -1;
+}
+.title{
+  margin: 0 auto;
+  font-family: 'AirbnbCerealApp-Bold';
+  padding-top: 55px;
+  color: white;
+}
+h1{
+  text-align: center;
+
 }
