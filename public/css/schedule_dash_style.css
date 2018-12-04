@@ -309,7 +309,7 @@ h2 {
 /* changed width of submit button -ken */
 input#addEventSubmit {
   width: 80%;
-  
+
 }
 
 .addContainer {
@@ -453,6 +453,7 @@ label.container {
   z-index: 5;
 }
 
+
 .groupContainer p {
   margin-top: 2px;
   margin-bottom: 2px
@@ -559,6 +560,10 @@ input[type=number] {
   color: white;
 
 }
+/* made input all align center -ken */
+div.shareContainer {
+  text-align: center;
+}
 
 input#eName {
   background-color: transparent;
@@ -566,6 +571,7 @@ input#eName {
   border-top: none;
   border-right: none;
   border-left: none;
+
 }
 
 ::placeholder {
